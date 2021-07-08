@@ -1,0 +1,75 @@
+<div class="cb-search-tool" style="position: fixed; top: 0px ; bottom: 0px; left: 0px; right:  0px;
+      opacity: 0.95; background-color: #111111; z-index: 9999; display: none;">
+    <div id="searchbar" style="height: 60px;" class="d-flex justify-content-center">
+        <div id="scrollable-dropdown-menu">
+            <input class="typeahead tt-input" type="text" id="cb-search-content" placeholder="Enter search text"
+                autocomplete="on" spellcheck="on" dir="auto">
+        </div>
+    </div>
+
+    <div style="position: fixed; top: 16px; right: 16px;">
+        <img src="/search/img/cb-close.png" id="cb-close-btn" />
+    </div>
+</div>
+
+<div style="position: fixed; right: 16px; bottom: 20px;">
+    <img src="/search/img/cb-search.png" id="cb-search-btn" title="Try Double Click Ctrl" />
+</div>
+
+<link rel="stylesheet" href="{{ " /search/css/dpds-search.css" | prepend: site.baseurl }}">
+
+
+<script type="text/javascript" src='{{ "/search/js/typeahead.bundle.js" | prepend: site.baseurl }}'></script>
+<script type="text/javascript" src='{{ "/search/js/fuzzyset.js" | prepend: site.baseurl }}'></script>
+<script type="text/javascript" src='{{ "/search/js/dpds-search.js" | prepend: site.baseurl }}'></script>
+
+
+<style>
+    input[type="checkbox"] {
+        appearance: auto !important;
+        -webkit-appearance: auto !important;
+        margin-top: 3px;
+        height: 1rem;
+        width: 1rem;
+        margin-left: 1rem;
+        margin-right: 5px;
+
+    }
+
+    input[type="text"] {
+        width: 90%;
+        position: relative;
+        vertical-align: top;
+        background-color: white;
+        border-radius: .25rem;
+        height: 40px;
+        margin: 10px;
+        font-size: 1.5rem;
+    }
+
+    .text {
+        color: var(--main-text-color);
+    }
+
+    div.tt-menu {
+        left: 0px !important;
+        margin-top: -10px !important;
+        margin-left: 10px;
+    }
+
+    #searchbar{
+        margin-top: 50px;
+    }
+    #scrollable-dropdown-menu{
+        width: 80vw;
+    }
+
+    #scrollable-dropdown-menu .tt-dropdown-menu {
+        max-height: 150px;
+        overflow-y: auto;
+    }
+
+    span.twitter-typeahead {
+        width: 90%;
+    }
+</style>

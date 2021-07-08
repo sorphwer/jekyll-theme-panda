@@ -1,0 +1,81 @@
+<head>
+
+  <meta property="og:title"
+    content="{% if page.title %}{{ page.title }} - {{ site.SEOTitle }}{% else %}{{ site.SEOTitle }}{% endif %}">
+  {% case page.layout %}
+  {% when 'post' %}
+  <meta property="og:type" content="article">
+  <meta property="og:description" content="{{ page.excerpt | strip_html | truncate:200 }}">
+  {% if page.date %}
+  <meta property="article:published_time" content="{{ page.date | date: "%Y-%m-%dT%H:%M:%SZ" }}">
+  {% endif %}
+  {% if page.author %}
+  <meta property="article:author" content="{{ page.author }}">
+  {% endif %}
+  {% for tag in page.tags %}
+  <meta property="article:tag" content="{{ tag }}">
+  {% endfor %}
+  {% else %}
+  <meta property="og:type" content="website">
+  <meta property="og:description"
+    content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  {% endcase %}
+  <meta property="og:image" content="{{ site.url }}{{ site.sidebar-avatar }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:site_name" content="{{ site.SEOTitle }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>{% if page.title %}{{ page.title }} - {{ site.SEOTitle }}{% else %}{{ site.SEOTitle }}{% endif %}</title>
+  
+
+  <!--CSS inside-->
+
+  <link rel="stylesheet" media="print,screen"  href="{{ "/assets/css/styles.css" | prepend: site.baseurl }}">
+  <!-- <link rel="stylesheet" media="print,screen" href={{ "/css/lib.css" | prepend: site.baseurl }}>
+  <link rel="stylesheet" media="print,screen" href={{ "/css/post.css" | prepend: site.baseurl }}>
+  <link rel="stylesheet" media="print,screen" href="{{ "/css/common.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" media="screen and (max-width: 768px)" href={{ "/css/sp.css" | prepend: site.baseurl }}>
+  <link rel="stylesheet" href="{{ "/css/syntax.css" | prepend: site.baseurl }}"> -->
+  <link rel="stylesheet" media="print,screen" href="{{ "/assets/css/font-awesome.min.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" media="print,screen" href="{{ "/assets/css/bootstrap.min.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" media="print,screen" href="{{ "/assets/fonts/amarillo/amarillo-font.css" | prepend: site.baseurl }}">
+  <!--Js inside-->
+  <script type="text/javascript" src='{{ "/assets/js/jquery-3.5.1.min.js" | prepend: site.baseurl }}'></script>
+  <script type="text/javascript" src='{{ "/assets/js/imagesLoaded-4.1.4.js" | prepend: site.baseurl }}'></script>
+  <script type="text/javascript" src='{{ "/assets/js/mermaid.min.js" | prepend: site.baseurl }}'></script>
+  <!-- <script type="text/javascript" src='{{ "/assets/js/skrollr-0.6.3.js" | prepend: site.baseurl }}'></script> -->
+  <script type="text/javascript" src='{{ "/assets/js/slick.min.js" | prepend: site.baseurl }}'></script>
+  <script type="text/javascript" src='{{ "/assets/js/script.js" | prepend: site.baseurl }}'></script>
+
+
+
+<link rel='dns-prefetch' href='//s.w.org' />
+<script type="text/javascript">
+  function loadCSS() {
+            if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|wOSBrowser|BrowserNG|WebOS)/i))) {
+              //document.write('<link rel="stylesheet" media="print,screen" href="{{ "/css/common.css" | prepend: site.baseurl }}">');
+              //document.write('<link rel="stylesheet" media="screen" href={{ "/css/sp.css" | prepend: site.baseurl }}>');
+              $('.pc').css('display','none !important');
+              $('.sp').css('display',"inline !important");
+              //alert('pc is hidden!')
+            }
+            else {
+                //document.write('<link rel="stylesheet" media="print,screen" href="{{ "/css/common.css" | prepend: site.baseurl }}">');
+                //document.write('<link rel="stylesheet" media="screen" href={{ "/css/sp.css" | prepend: site.baseurl }}>');
+                //$(body).css('min-width','1000px');
+                $('.sp').css('display','none !important');
+                $('.pc').css('display','inline !important');
+                //alert('plz hide the sp nav')
+            }
+        }
+        $(function () {
+        loadCSS();
+        // mermaid.initialize({startOnLoad:true});
+
+        console.log('[↑]END');
+        mermaid.init(undefined, $('.language-mermaid'));
+      });
+
+</script>
+  
+
+</head>

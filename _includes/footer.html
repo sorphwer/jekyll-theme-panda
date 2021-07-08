@@ -1,0 +1,80 @@
+<footer class="js-fadein">
+  <div class="footer__link">
+    <p>
+      <a href="{{ site.url }}/feed.xml">RSS Subscribe</a><span>/</span><a href="{{ site.url }}/policy/">Privacy
+        Policy</a>
+    </p>
+  </div>
+  <!-- .footer__link -->
+  <div class="footer__copy">
+    {% for item in site.footer_text %}
+      <small>{{item}}</small>
+    {% endfor %}
+    {% if site.hoster_logo != false %}
+      <ul style="margin-bottom: 0;">
+        <li>
+          <a href="{{site.hoster_logo_link}}" target="_blank"><img src="{{ site.baseurl | append: site.hoster_logo}}" alt="{{site.hoster_logo_alt}}"
+              class=" black-white-image" /><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></a>
+        </li>
+
+      </ul>
+      {% for item in site.hoster_text %}
+      <small>{{item}}</small>
+      {% endfor %}
+    {% endif %}
+  </div>
+  <!-- .footer__copy -->
+</footer>
+
+
+
+
+
+
+
+
+<div class="menu sp">
+  <div class="menu__inner">
+
+
+
+    <ul>
+      {% for link in site.navigation %} {% assign current = nil %} {% if
+      page.url == link.url or page.layout == link.layout %} {% assign current =
+      'is-current is-active' %} {% endif %}
+
+      <li class=" {{ current }} ">
+        <a href="{{ link.url }}">{{ link.text }}</a>
+      </li>
+
+      {% endfor %}
+
+    </ul>
+
+
+    <div class="menu_closeBtn">
+      <div class="menu_closeBtn__inner">
+
+        <a href="javascript:void(0);">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </div>
+      <!-- .menu_closeBtn__inner -->
+    </div>
+    <!-- .menu_closeBtn -->
+
+
+  </div>
+  <!-- .menu__inner -->
+</div>
+<!-- .menu -->
+<script>
+  if (sessionStorage.getItem('theme') === "dark") {
+    $('.black-white-image').css("filter", 'brightness(100)');
+  } else {
+    $('.black-white-image').css("filter", 'brightness(0)');
+  };
+
+</script>

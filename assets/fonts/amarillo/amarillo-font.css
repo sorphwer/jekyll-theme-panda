@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'AmarilloUSAF';
+  src: url('AmarilloUSAF.svg#AmarilloUSAF') format('svg'),
+       url('AmarilloUSAF.ttf') format('truetype'),
+       url('AmarilloUSAF.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'amarurgt';
+  src: url('amarurgt.eot');
+  src: url('amarurgt.eot?#iefix') format('embedded-opentype'),
+       url('amarurgt.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+

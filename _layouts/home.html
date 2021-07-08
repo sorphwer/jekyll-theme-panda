@@ -1,0 +1,115 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: default
+
+---
+<style>
+    .home-message{ 
+    
+    margin-top:50px!important;/*Only works in home.html*/
+  
+  }
+</style>
+   <section style="height: 120px;"></section>
+{% for post in site.posts %}
+{% if post.sticky and paginator.page==1%}
+
+
+<section class="home-message js-fadein">
+    <div class="home-message__ttl">
+    <a href="{{ post.url | prepend: site.baseurl }}"  >
+        {% if post.status %}
+        <h2>
+            <b>[Pinned] </b>{{ post.title }}<sup>[{{post.status}}]</sup>
+        </h2>
+        {% else %}
+        <h2>
+            <b>[Pinned] </b>{{ post.title }}
+        </h2>
+        {% endif %}
+        {% if post.subtitle %}
+        <p class="u-txt__label">
+            {{ post.subtitle }}
+        </p>
+        {% endif %}
+       
+        <div class="post-content-preview">
+            <p class="u-txt__label">
+            {% if post.lang == 'en' %}
+            {{ post.content | strip_html | truncate:300 }}
+            {% else %}
+            {{ post.content | strip_html | truncate:200 }}
+            {% endif %}
+        </p>
+        </div>
+       
+    </a>
+    </div>
+    <p class="post-meta">
+        Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
+    </p>
+</section>
+<hr>
+{% endif %}{% endfor %}
+
+
+
+
+
+{% for post in paginator.posts %}{% unless post.sticky %}
+{% unless post.hide %}
+<section class="home-message js-fadein">
+    <div class="home-message__ttl">
+    <a href="{{ post.url | prepend: site.baseurl }}"  >
+        {% if post.status %}
+        <h2>
+            {{ post.title }}<sup>[{{post.status}}]</sup>
+        </h2>
+        {% else %}
+        <h2>
+            {{ post.title }}
+        </h2>
+        {% endif %}
+        {% if post.subtitle %}
+        <p class="u-txt__label">
+            {{ post.subtitle }}
+        </p>
+        {% endif %}
+       
+        <div class="post-content-preview">
+            <p class="u-txt__label">
+            {% if post.lang == 'en' %}
+            {{ post.content | strip_html | truncate:300 }}
+            {% else %}
+            {{ post.content | strip_html | truncate:200 }}
+            {% endif %}
+        </p>
+        </div>
+       
+    </a>
+    </div>
+    <p class="post-meta">
+        Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
+    </p>
+</section>
+<hr>
+{%endunless%}
+{% endunless %}{% endfor %}
+
+<!-- Pager -->
+{% if paginator.total_pages > 1 %}
+<ul class="pager" style="text-align: center;list-style-type:none">
+    {% if paginator.previous_page %}
+    <li class="previous">
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+    </li>
+    {% endif %}
+    {% if paginator.next_page %}
+    <li class="next">
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+    </li>
+    {% endif %}
+</ul>
+{% endif %}

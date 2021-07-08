@@ -1,0 +1,157 @@
+<style type="text/css">
+    li {
+        text-transform: uppercase;
+    }
+
+    #theme-toggle-mobile {
+        vertical-align: text-bottom;
+        font-size: 13px;
+    }
+</style>
+<header>
+    <div class="header__inner u-clearfix">
+        <nav class="header__navi pc">
+            <ul class="u-clearfix">
+                <!--
+                <li>
+                    <a href="{{ site.baseurl }}/">Home</a>
+                </li>
+                -->
+
+
+                {% for link in site.navigation %}
+                {% assign current = nil %}
+                {% if page.url == link.url or page.layout == link.layout %}
+                {% assign current = 'is-current is-active' %}
+                {% endif %}
+
+                <li class=" {{ current }} ">
+                    <a href="{{ link.url }}">{{ link.text }}</a>
+                </li>
+
+                {% endfor %}
+
+                {% if site.dropdown != false %}
+                <li class="navi__lang js-lang">
+                    <a class="navi__langLink" href="javascript:void(0);">{{site.dropdown_header}}</a>
+                    {% for item in site.dropdown %}
+                    <div class="navi__langList">
+                        <span><a href="{{item.link}}">{{item.text}}</a></span>
+                    </div>
+                    {% endfor %}
+                </li>
+                {% endif %}
+                <li>
+                    <i class="fa fa-adjust" aria-hidden="true" style="display:inline"></i>
+                    <a id="theme-toggle" href="javascript:void(0)" style="list-style-type:none!important;display:inline"
+                        onclick="modeSwitcher()">theme-toggle</a>
+                </li>
+
+            </ul>
+
+
+        </nav><!-- .header__navi -->
+        <nav class="header__sns pc">
+            <ul class="u-clearfix">
+                <li><a href="{{site.github_url}}" target="_blank"><i class="fa fa-github-alt"></i>GITHUB</a></li>
+            </ul>
+        </nav><!-- .header__sns -->
+        <div class="header__logo sp">
+            <a href="{{site.url}}">
+                <p class="header__logoTxt black-white-image"><img src="{{ site.url }}/img/logo_Nest.png"
+                        alt="Riino BLOG"></p>
+            </a>
+        </div><!-- .header__logo -->
+
+        <div class="header__logo sp" style="margin-left: 20px;" onclick="modeSwitcher()">
+            <a href="javascript:void(0);">
+                <p class="header__logoTxt black-white-image"><img src="{{ site.url }}/img/switcher.png"
+                        alt="Riino BLOG"></p>
+            </a>
+        </div><!-- .swithcer__logo -->
+
+
+
+
+
+        <div class="menuBtn sp">
+            <div class="menuBtn__inner">
+                <a href="javascript:void(0);">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div><!-- .menuBtn__inner -->
+        </div><!-- .menuBtn -->
+    </div>
+</header>
+
+
+
+<!--<section style="height: 200px;"></section>-->
+<script>
+    const sessionStorage = window.sessionStorage;
+    let systemInitiatedDark = window.matchMedia("(prefers-color-scheme: dark)");
+    let theme = sessionStorage.getItem('theme');
+    function setAsLightTheme() {
+        document.documentElement.setAttribute('data-theme', 'light');
+        sessionStorage.setItem('theme', 'light');
+        $("#theme-toggle").html("Dark Mode");
+        $("#theme-toggle-mobile").html("Dark Mode");
+        $('.black-white-image').css("filter", 'brightness(0)');
+        $('.warning-image').css("filter", 'invert(51%)sepia(93%)saturate(4588%)hue-rotate(309deg)brightness(94%)contrast(93%)');
+        // $('.warning-image').css("filter",'invert(51%) sepia(93%) saturate(4588%) hue-rotate(309deg) brightness(94%) contrast(93%);');
+    };
+    function setAsDarkTheme() {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        sessionStorage.setItem('theme', 'dark');
+        $("#theme-toggle").html("Light Mode");
+        $("#theme-toggle-mobile").html("Light Mode");
+        $('.black-white-image').css("filter", 'brightness(100)');
+        $('.warning-image').css("filter", 'invert(38%)sepia(73%)saturate(3208%)hue-rotate(310deg)brightness(96%)contrast(90%)');
+        // $('.warning-image').css("filter",'invert(38%) sepia(73%) saturate(3208%) hue-rotate(310deg) brightness(96%) contrast(90%)');
+
+    }
+    //handle theme change
+    function prefersColorTest(systemInitiatedDark) {
+        if (systemInitiatedDark.matches) {
+            setAsDarkTheme();
+        } else {
+            setAsLightTheme();
+        }
+    }
+    systemInitiatedDark.addListener(prefersColorTest);
+
+    //handle click
+    function modeSwitcher() {
+        let theme = sessionStorage.getItem('theme');
+        if (theme === "dark") {
+            setAsLightTheme();
+        } else if (theme === "light") {
+            setAsDarkTheme()
+        } else if (systemInitiatedDark.matches) {
+            setAsLightTheme();
+        } else {
+            setAsDarkTheme();
+        }
+    };
+
+    function initTheme() {
+        if (theme) {
+            if (theme == "dark") {
+                setAsDarkTheme();
+            } else if (theme == "light") {
+                setAsLightTheme();
+            }
+        }
+        else {
+            prefersColorTest(systemInitiatedDark);
+        }
+    }
+    initTheme();//avoid passing a white page if the intention is dark theme
+    $(document).ready(function () {
+        initTheme();
+    })
+
+    console.log('[↓]BEGIN');
+</script>

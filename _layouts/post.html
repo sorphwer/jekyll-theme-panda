@@ -1,0 +1,117 @@
+---
+layout: default
+---
+
+
+
+{%if page.mathjax != false %}
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      inlineMath: [['$','$']]
+      }
+  });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+{%endif%}
+
+
+<section id="front-wedge" style="height: 0px;"></section>
+{% if page.toc != false %}
+<div class="sidebar_catelog sticky-top"></div>
+{% endif %}
+<section class="js-fadein main-body">
+
+    <div class="home-message__ttl" style="text-align: left;">
+        <h1>
+            {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
+
+            {% if page.status%}<sup>[{{page.status}}]</sup>{%endif%}
+            <a class="edit-button" href="{{site.repo_url}}/blob/master/{{page.path}}" title="Edit on GitHub"><i
+                    class="fa fa-edit"></i></a>
+            <!-- <a class="download tbutton" href="{{site.url}}/{{page.path}}">Download</a> -->
+        </h1>
+        <h4 class="subheading">{{ page.subtitle }}</h4>
+
+        {% if page.last-modify %}
+        <span class="meta">Last modified by <i>{% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif
+                %}</i> on {{page.last-modify | date: "%B %-d, %Y"}}
+
+            {% else %}
+            <span class="meta">Posted by <i>{% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif
+                    %}</i> on {{ page.date | date: "%B %-d, %Y" }}
+
+                {% endif %}
+
+
+            </span><i class="fa fa-tags"></i>
+
+            {% for tag in page.tags %}
+            <a class="tag" href="{{ site.baseurl }}/archive.html?tag={{ tag | url_encode }}" title="{{ tag }}">{{ tag
+                }}</a>
+            {% endfor %}
+
+    </div>
+
+    <div class="container">
+        {% if page.toc == "inline" %}
+        <div>
+            {% include toc.html html=content class='toc' h_max=3 %}
+        </div>
+        {% endif %}
+        {% if page.toc != false and page.toc != "inline"%}
+        <div id="table-of-contents">
+            {% include toc.html html=content class='toc' h_max=3 %}
+        </div>
+        {% endif %}
+        <div id="markdown-content">
+
+            <!-- custom banner -->
+            {% if page.banner-title%}
+            <div class="d-flex banner">
+                <img src="/assets/img/banner.gif" class="black-white-image p-2 flex-fill bd-highlight banner-image">
+                <div class="p-2 flex-fill bd-highlight ">
+                    <h1 class="banner-text">{{page.banner-title}}</h1>
+                    <p class="banner-text">{{page.banner-subtitle}}</p>
+                </div>
+            </div>
+            {%endif%}
+            <!-- custom banner -->
+            <!-- expired banner -->
+            {% capture post_date%}{{ page.date | date: "%Y" }}{%endcapture%}
+            {% capture curr_date%}{{ "now" | date: "%Y" }}{%endcapture%}
+            {% assign curr_date = curr_date | minus: post_date %}
+            {% capture time %}{{curr_date|minus: post_date}}{%endcapture%}
+            {% if curr_date>1 %}
+            <div class="d-flex banner">
+                <img src="/assets/img/banner.gif" class="warning-image p-2 flex-fill bd-highlight banner-image">
+                <div class="p-2 flex-fill bd-highlight ">
+                    <h1 class="banner-text" style="color: #e83e8c !important;"><i class="fa fa-exclamation-triangle"
+                            style="color: #e83e8c !important;font-size: 2.5rem;" aria-hidden="true"></i> Expired</h1>
+                    <p class="banner-text">Post published over one year ago</p>
+                </div>
+            </div>
+            {%endif%}
+
+            <!-- expired banner -->
+            <!-- WIP banner -->
+            {%if page.status == "WIP"%}
+            <div class="d-flex banner">
+                <img src="/assets/img/banner.gif" class="black-white-image p-2 flex-fill bd-highlight banner-image">
+                <div class="p-2 flex-fill bd-highlight ">
+                    <h1 class="banner-text">Work in progress</h1>
+                    <p class="banner-text"><i class="fa fa-spinner" aria-hidden="true"></i>This post will be updated
+                        soon</p>
+                </div>
+            </div>
+            {%endif%}
+            <!-- WIP banner -->
+
+            {{ content }}
+        </div>
+
+    </div>
+    
+</section>
