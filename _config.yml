@@ -1,0 +1,80 @@
+# Welcome to RiinoSite3!
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Riino Site
+email: riino@gmail.com
+description: >- # this means to ignore newlines until "baseurl:",you can add <description>{{ post.content | xml_escape }}</description> in feed.xml.
+  A tech blog site of Riisite3.0, owned by Riino.
+SEOTitle: EXEC-RS
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://riino.site" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: sorphwer
+github_username:  sorphwer
+github_url: https://github.com/sorphwer
+repo_url: https://github.com/sorphwer/sorphwer.github.io
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+# theme: riinosite
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jemoji
+paginate: 10
+
+toc:
+  min_level: 1 # default: 1
+  max_level: 4 # default: 6
+sass:
+    sass_dir: _sass
+    style: compressed
+
+navigation:
+- text: Home
+  url: /index.html
+  layout: home
+- text: Archive
+  url: /archive
+  layout: forarchive
+- text: profile
+  url: /about/
+
+dropdown_header: BLOG #will only exist if dropdown array below has item(s)
+dropdown:
+- text: low illu.
+  url: https://li.riino.site/
+
+footer_text:
+- Shiqi Riino Zhang
+- Legality and internal compliance review by <a href="https://riino.site/data-collection-policy/"><i>NoEPerspective</i></a>
+- Image and animte assets &copy by <a href="https://li.riino.site"><i>Low illuminance</i></a>
+- All Rights Reserved.
+
+hoster_logo: /assets/img/logo_Nest.png
+hoster_logo_link: https://github.com/sorphwer
+hoster_logo_alt: Github
+hoster_text:
+- Nest of Etamine - 10th Anniversary
+- 2012-2022
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+# this goes inside _config.yml. Change as required
