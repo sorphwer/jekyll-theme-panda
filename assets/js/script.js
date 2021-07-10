@@ -178,9 +178,6 @@ $(function(){
   headerNaviHover();
   headerNaviLangHover();
   aboutMissionSlider();
-  artistWhySlider();
-  artistOtherModal();
-  newsCrossSearch();
   sp__menu();
   // console.clear();
 
