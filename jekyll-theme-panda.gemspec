@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 Gem::Specification.new do |spec|
-  spec.name          = "jekyll-theme-riinosite"
-  spec.version       = "3.2.1"
+  spec.name          = "jekyll-theme-panda"
+  spec.version       = "0.1.1"
   spec.authors       = ["riino"]
   spec.email         = ["sorphwer@gmail.com"]
 

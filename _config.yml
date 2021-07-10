@@ -12,11 +12,11 @@ title: Riino Site
 email: riino@gmail.com
 description: >- # this means to ignore newlines until "baseurl:",you can add <description>{{ post.content | xml_escape }}</description> in feed.xml.
   A tech blog site of Riisite3.0, owned by Riino.
-SEOTitle: EXEC-RS
+SEOTitle: RiinoSite Theme
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://riino.site" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: sorphwer
-github_username:  sorphwer
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: twitter_name
+github_username: github_name 
 github_url: https://github.com/sorphwer
 repo_url: https://github.com/sorphwer/sorphwer.github.io
 # Build settings
