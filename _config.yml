@@ -8,17 +8,17 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Riino Site
+title: jekyll-theme-panda
+author: riino
 email: riino@gmail.com
-description: >- # this means to ignore newlines until "baseurl:",you can add <description>{{ post.content | xml_escape }}</description> in feed.xml.
-  A tech blog site of Riisite3.0, owned by Riino.
 SEOTitle: RiinoSite Theme
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: twitter_name
 github_username: github_name 
 github_url: https://github.com/sorphwer
-repo_url: https://github.com/sorphwer/sorphwer.github.io
+repo_url: https://github.com/sorphwer/jekyll-theme-panda
+theme_version: 0.1.0
 # Build settings
 markdown: kramdown
 kramdown:
