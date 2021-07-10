@@ -1,4 +1,5 @@
-
+#This config file is specificated for theme demo page : https://riino.site/jekyll-theme-panda/
+#Please do not use this config directly if you desire to use this repo as your blog.
 title: jekyll-theme-panda
 author: riino
 email: riino@gmail.com
@@ -30,13 +31,13 @@ sass:
 
 navigation:
 - text: Home
-  url: /index.html
+  url: /jekyll-theme-panda/index.html
   layout: home
 - text: Archive
-  url: /archive
+  url: /jekyll-theme-panda/archive
   layout: forarchive
 - text: profile
-  url: /about/
+  url: /jekyll-theme-panda/about/
 
 dropdown_header: BLOG #will only exist if dropdown array below has item(s)
 dropdown:
