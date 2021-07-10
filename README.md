@@ -1,9 +1,17 @@
 # jekyll-theme-panda
 
 
-
-
 ## Installation
+
+### Set up via jekyll-remote-theme
+
+**Step 1**  Install [jekyll-remote-theme](https://github.com/benbalter/jekyll-remote-theme)
+
+**Step 2**  Fork this [jekyll-theme-panda]( https://github.com/sorphwer/jekyll-theme-panda)
+
+**Step 3**  Set `remote_theme : <your-github-username>/jekyll-theme-panda`
+
+### Set up via bundler (Not available in GithubPage)
 
 Add this line to your Jekyll site's `Gemfile`:
 
@@ -62,22 +70,8 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/sorphw
 
 ## Development
 
-### Set up via jekyll-remote-theme
+We suggest fork this repo and set it as your own **remote_theme** to modify this theme.
 
-**Step1**  Install [jekyll-remote-theme](https://github.com/benbalter/jekyll-remote-theme)
-
-**Step2**  Fork this [jekyll-theme-panda]( https://github.com/sorphwer/jekyll-theme-panda)
-
-**Step3**  Set `remote_theme : <your-github-username>/jekyll-theme-panda`
-
-### Set up via bundler (not implemented yet)
-
-To set up your environment to develop this theme, run `bundle install`.
-
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
-
-When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `jekyll-theme-riinosite.gemspec` accordingly.
 
 ## License
 
