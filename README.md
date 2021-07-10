@@ -72,6 +72,9 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/sorphw
 
 We suggest fork this repo and set it as your own **remote_theme** to modify this theme.
 
+## About Search Tool
+
+`jekyll-theme-panda` is currently use [jekyll-search-bar](https://github.com/sorphwer/jekyll-search-bar) hosted in riino.site in default mode. To modify this search tool, please check the corresponding github page.
 
 ## License
 
