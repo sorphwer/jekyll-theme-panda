@@ -1,20 +1,20 @@
 ---
 layout: post
-title:  "Welcome to RiinoSite3!"
-subtitle: "Features of RiinoSite3 Blog" #optional 
+title:  "Theme Showcase"
+subtitle: "Features and yaml configuration demo" #optional 
 author: "RiinoSite"    #optional
 date:   2020-03-01 17:08:09 +0800
 tags:           #optional
 - jekyll 
 - doc
 status: doc     #optional,if status is 'WIP', will display a WIP banner
-last-modify: 2020-01-27 10:30:00 +0000 #optional
+last-modify: 2020-07-10 10:30:00 +0000 #optional
 toc: true       #default: true
 sticky : true   #default: false
 hide: false     #default: false (hide from Home page only)
 mathjax: true   #default: true
 mermaid: true   #default: true
-banner-title: RiinoSite Blog #optional
+banner-title: THEME DOC #optional
 banner-subtitle: Readme.md #optional, must be with banner-title
 # toc options: inline, true, false
 ---

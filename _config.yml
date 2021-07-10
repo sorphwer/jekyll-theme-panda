@@ -10,7 +10,7 @@ twitter_username: twitter_name
 github_username: github_name 
 github_url: https://github.com/sorphwer
 repo_url: https://github.com/sorphwer/jekyll-theme-panda
-theme_version: 0.1.0
+theme_version: 0.1.1
 # Build settings
 markdown: kramdown
 kramdown:
