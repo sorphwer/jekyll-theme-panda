@@ -1,18 +1,9 @@
-# Welcome to RiinoSite3!
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 title: jekyll-theme-panda
 author: riino
 email: riino@gmail.com
 SEOTitle: RiinoSite Theme
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/jekyll-theme-panda" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: twitter_name
 github_username: github_name 
@@ -24,7 +15,6 @@ markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
-# theme: riinosite
 plugins:
   - jekyll-feed
   - jekyll-paginate
@@ -50,12 +40,13 @@ navigation:
 
 dropdown_header: BLOG #will only exist if dropdown array below has item(s)
 dropdown:
-- text: low illu.
-  url: https://li.riino.site/
+- text: drop1.
+  url: 
+- text: drop2.
+  url:
 
 footer_text:
-- Shiqi Riino Zhang
-- Legality and internal compliance review by <a href="https://riino.site/data-collection-policy/"><i>NoEPerspective</i></a>
+- jekyll-theme-panda demo by Riino
 - Image and animte assets &copy by <a href="https://li.riino.site"><i>Low illuminance</i></a>
 - All Rights Reserved.
 
