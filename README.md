@@ -1,9 +1,17 @@
 # jekyll-theme-panda
 
 
-
-
 ## Installation
+
+### Set up via jekyll-remote-theme
+
+**Step 1**  Install [jekyll-remote-theme](https://github.com/benbalter/jekyll-remote-theme)
+
+**Step 2**  Fork this [jekyll-theme-panda]( https://github.com/sorphwer/jekyll-theme-panda)
+
+**Step 3**  Set `remote_theme : <your-github-username>/jekyll-theme-panda`
+
+### Set up via bundler (Not available in GithubPage)
 
 Add this line to your Jekyll site's `Gemfile`:
 
@@ -62,21 +70,7 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/sorphw
 
 ## Development
 
-### Set up via jekyll-remote-theme
-
-**Step1**  Install [jekyll-remote-theme](https://github.com/benbalter/jekyll-remote-theme)
-
-**Step2**  Fork this [jekyll-theme-panda]( https://github.com/sorphwer/jekyll-theme-panda)
-
-**Step3**  Set `remote_theme : <your-github-username>/jekyll-theme-panda`
-
-### Set up via bundler 
-
-Install
-
-```
-gem install jekyll-theme-panda
-```
+We suggest fork this repo and set it as your own **remote_theme** to modify this theme.
 
 
 ## License
