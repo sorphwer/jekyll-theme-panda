@@ -1,10 +1,6 @@
-# jekyll-theme-riinosite
+# jekyll-theme-panda
 
-Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
 
-To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
-
-TODO: Delete this and the text above, and describe your gem
 
 
 ## Installation
@@ -12,32 +8,69 @@ TODO: Delete this and the text above, and describe your gem
 Add this line to your Jekyll site's `Gemfile`:
 
 ```ruby
-gem "jekyll-theme-riinosite"
+gem "jekyll-theme-panda"
 ```
 
 And add this line to your Jekyll site's `_config.yml`:
 
 ```yaml
-theme: jekyll-theme-riinosite
+theme: jekyll-theme-panda
 ```
 
 And then execute:
 
-    $ bundle
+    $ bundle install
 
 Or install it yourself as:
 
-    $ gem install jekyll-theme-riinosite
+    $ gem install jekyll-theme-panda
 
 ## Usage
 
-TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
+### Available layouts:
+
+| name       | description         | filename        |
+| ---------- | ------------------- | --------------- |
+| default    | default layout      | default.html    |
+| home       | index page layout   | home.html       |
+| forarchive | archive page layout | forarchive.html |
+| post       | post page layout    | post.html       |
+
+**Available includes(html):**
+
+| name   | description                                   | filename    |
+| ------ | --------------------------------------------- | ----------- |
+| footer | footer component, can be edited in _config    | footer.html |
+| head   | head tag                                      | home.html   |
+| header | navigator component, can be edited in _config | header.html |
+| search | search bar plug-in                            | search.html |
+
+**Available includes(md):**
+
+| name            | description                           | path                   |
+| --------------- | ------------------------------------- | ---------------------- |
+| profile content | markdown content in Profile in header | _includes\about\en.md  |
+| policy content  | markdown content in Policy in footer  | _includes\policy\en.md |
+
+**Syntax colors:**
+
+Check `_sass\syntax.scss`
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hello. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/sorphwer/jekyll-theme-panda. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## Development
+
+### Set up via jekyll-remote-theme
+
+**Step1**  Install [jekyll-remote-theme](https://github.com/benbalter/jekyll-remote-theme)
+
+**Step2**  Fork this [jekyll-theme-panda]( https://github.com/sorphwer/jekyll-theme-panda)
+
+**Step3**  Set `remote_theme : <your-github-username>/jekyll-theme-panda`
+
+### Set up via bundler (not implemented yet)
 
 To set up your environment to develop this theme, run `bundle install`.
 
