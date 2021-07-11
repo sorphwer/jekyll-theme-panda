@@ -1,9 +1,10 @@
 # jekyll-theme-panda
 
+[![Gem Version](https://badge.fury.io/rb/jekyll-theme-panda.svg)](https://badge.fury.io/rb/jekyll-theme-panda) 
 
 ## Installation
 
-### Set up via jekyll-remote-theme
+### Choice 1 : Set up via jekyll-remote-theme
 
 **Step 1**  Install [jekyll-remote-theme](https://github.com/benbalter/jekyll-remote-theme)
 
@@ -11,7 +12,7 @@
 
 **Step 3**  Set `remote_theme : <your-github-username>/jekyll-theme-panda`
 
-### Set up via bundler (Not available in GithubPage)
+### Choice 2 : Set up via bundler (Not available in GithubPage)
 
 Add this line to your Jekyll site's `Gemfile`:
 
@@ -32,6 +33,10 @@ And then execute:
 Or install it yourself as:
 
     $ gem install jekyll-theme-panda
+    
+### Choice 3 : Directly use this repo 
+
+Clone this repo or download this repo in your computer, then edit files in `_post` and edit `_config.yml`.
 
 ## Usage
 
