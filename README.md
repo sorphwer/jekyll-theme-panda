@@ -1,6 +1,6 @@
 # jekyll-theme-panda
 
-[![Gem Version](https://badge.fury.io/rb/jekyll-theme-panda.svg)](https://badge.fury.io/rb/jekyll-theme-panda) 
+[![Gem Version](https://badge.fury.io/rb/jekyll-theme-panda.svg)](https://badge.fury.io/rb/jekyll-theme-panda)  ![](https://ruby-gem-downloads-badge.herokuapp.com/jekyll-theme-panda?type=total)
 
 ## Installation
 
