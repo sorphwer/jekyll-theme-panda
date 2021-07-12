@@ -12,6 +12,15 @@ banner-subtitle: Dev Backlog
 last-modify: 2021-07-10 10:30:00 +0000
 
 ---
+## Ver. Panda-0.2 (WIP)
+
+- Feat: New layout : blank (default layout without header and footer)
+- Feat: New layout : album
+- Feat: New layout : albumlist
+- Feat: New layout : preset
+- Feat: New layout : presetlist
+- Refactpr: Config refactor
+- Fix: dropdown liquid issue
 
 ## Ver. Panda-0.1.0
 
