@@ -13,7 +13,8 @@ layout: default
   }
 </style>
    <section style="height: 120px;"></section>
-{% for post in site.posts %}
+{% assign post_list = site.posts | where: "layout","post"%}
+{% for post in post_list %}
 {% if post.sticky and paginator.page==1%}
 
 

@@ -41,7 +41,7 @@ https://github.com/kitian616/jekyll-TeXt-theme
             <section style="height:100px"></section>
             <!-- Article List -->
 			<div class="mini-post-list js-result d-none">
-			{%- assign _sorted_list = site.posts -%}
+			{%- assign _sorted_list = site.posts | where: "layout","post"-%}
 			{%- assign _sorted_list = _sorted_list | sort: 'date' -%}
 			{%- assign _sorted_list = _sorted_list | reverse -%}
 
