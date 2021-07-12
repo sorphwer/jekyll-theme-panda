@@ -1,0 +1,192 @@
+---
+layout: default
+---
+
+<script>
+    function mousePosition(ev) {
+        ev = ev || window.event;
+        if (ev.pageX || ev.pageY) {
+            return { x: ev.pageX, y: ev.pageY };
+        }
+        return {
+            x: ev.clientX + document.body.scrollLeft - document.body.clientLeft,
+            y: ev.clientY + document.body.scrollTop - document.body.clientTop
+        };
+    }
+
+    $(document).ready(function () {
+        $(function () {
+            //鼠标在未被遮挡的位置：
+            $(".v-section").mousemove(function (e) {
+                //获取鼠标位置函数
+                var mousePos = mousePosition(e);
+                var xOffset = 0;
+                var yOffset = 25;
+
+                $(".v-section-cover").css("width", ((mousePos.x + xOffset) / $(".v-section").width()) * 100 + "%");
+                console.log((mousePos.x) / $(".v-section").width());
+            });
+            //鼠标离开未被遮挡位置
+            $(".v-section").mouseout(function () {
+                // $("#tooltip").empty();
+                // $("#tooltip").css("display","none");
+                console.log("mouse left uncovered");
+            });
+            //////////////////////////////////////////////////////////////
+            //鼠标在被遮挡的位置：
+            $(".v-section-cover").mousemove(function (e) {
+
+                var mousePos = mousePosition(e);
+                var xOffset = 0;
+                var yOffset = 25;
+
+                $(".v-section-cover").css("width", ((mousePos.x + xOffset) / $(".v-section").width()) * 100 + "%");
+                console.log((mousePos.x) / $(".v-section").width());
+
+
+            });
+            //鼠标离开被遮挡位置
+            $(".v-section-cover").mouseout(function () {
+                // $("#tooltip").empty();
+                // $("#tooltip").css("display","none");
+                console.log("mouse left covered");
+            });
+
+        });
+
+
+
+    });
+</script>
+
+
+<body class="home blog lang-ja footer_mt">
+
+    <section class="v-section"> </section>
+    <section class="v-section-cover"></section>
+
+
+    <section class="home-message js-fadein">
+        <div>
+            <div class="home-message__ttl" style="margin-top:10px">
+                <h2>SHILIN FILTER IS?</h2>
+
+            </div><!-- .home-message__ttl -->
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <p class="u-txt__label">
+                            Shilin filter is the first open LR/PS preset of Riino Lin.
+                            The main spirit comes from a experience editing photo took in Shilin,Taipei.
+                            The thought is to enhance the cool color and addding orrange in red,and cancel green.
+
+                        </p>
+                    </div>
+                    <div class="col-sm">
+                        <p class="u-txt__label">
+                            士林フィルターは、リイノの最初のオープンLR / PSプリセットである。
+                            台北の士林夜市で撮影した写真を編集した経験から来ています。
+                            冷色を修正し、赤やオレンジ色の追加と強化、緑を弱くなることです。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="home-message__ttl">
+                <h2></h2>
+
+            </div><!-- .home-message__ttl -->
+            <div class="home-message__ttl" id="whiteline">
+                <h2 id="white"></h2>
+
+            </div><!-- .home-message__ttl -->
+            <section style="height: 20vh;display: flex;align-items: center;justify-content: center;">
+                <button type="button" class="btn btn-light btn-lg" data-toggle="button" aria-pressed="false"
+                    autocomplete="off"
+                    onclick="window.location.href='https://li.riino.site/download/Riino_BlackGold.zip'">
+                    Download
+                </button>
+            </section>
+        </div>
+    </section>
+    <!--<section class="f-section" id="sec2">  </section>-->
+    <section class="v-section-70" id="shilin_bg">
+        <section class="home-message js-fadein">
+            <div>
+                <div class="home-message__ttl" id="whiteline">
+                    <h2 id="white">DERIVATION</h2>
+
+                </div><!-- .home-message__ttl -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm">
+                            <p class="u-txt__label" id="white">
+                                The origin preset is for night photograph.But it suprisingly works will in other cases.
+
+                            </p>
+                        </div>
+                        <div class="col-sm">
+                            <p class="u-txt__label" id="white">
+                                元のプリセットは夜の写真用ですが、他の場合にも驚くほどうまくいきます。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="home-message__ttl" id="whiteline">
+                    <h2></h2>
+
+                </div><!-- .home-message__ttl -->
+            </div>
+        </section>
+    </section>
+
+
+    <section class="home-message js-fadein">
+
+        <div class="album">
+            <h2 class="u-ttl__02 u-ttl__dot">Atmosphere adjustment </h2>
+            <p class="u-txt__label">冷たい雰囲気を与える</p>
+
+        </div>
+        <img class="album" src="img/shilin_1.jpg">
+        <p class="u-txt__label" style="text-align: right;">@ Twatutia, Taipei, 2019</p>
+    </section>
+
+
+    <section class="home-message js-fadein">
+        <div class="album">
+            <h2 class="u-ttl__02 u-ttl__dot">Sharpness addon</h2>
+            <p class="u-txt__label">シャープネスを追加</p>
+
+        </div>
+        <div>
+            <img class="album" src="img/shilin_2.jpg">
+            <p class="u-txt__label" style="text-align: right;">@ Tamsui,New Taipei City, 2019</p>
+        </div>
+    </section>
+
+    <section class="home-message js-fadein">
+        <div class="album">
+            <h2 class="u-ttl__02 u-ttl__dot">Portrait case</h2>
+            <p class="u-txt__label">肖像写真の場合も可能</p>
+
+        </div>
+        <div>
+            <img class="album" src="img/shilin_3.jpg">
+            <p class="u-txt__label" style="text-align: right;">@"Wangyou Valley",Keelung, 2019</p>
+        </div>
+    </section>
+
+
+
+    <section style="text-align: center;">
+        <button type="button" class="btn btn-outline-light btn-lg" data-toggle="button" aria-pressed="false"
+            autocomplete="off" onclick="window.location.href='https://li.riino.site/download/Riino_BlackGold.zip'">
+            Download
+        </button>
+    </section>
+
+
+
+
+</body>

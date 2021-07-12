@@ -11,6 +11,7 @@ github_username: github_name
 github_url: https://github.com/sorphwer
 repo_url: https://github.com/sorphwer/jekyll-theme-panda
 theme_version: 0.1.1
+permalink: /:year-:month-:day-:title:output_ext
 # Build settings
 markdown: kramdown
 kramdown:
@@ -31,13 +32,16 @@ sass:
 
 navigation:
 - text: Home
-  url: /jekyll-theme-panda/index.html
+  url: ./index.html
   layout: home
 - text: Archive
-  url: /jekyll-theme-panda/archive
+  url: ./archive
   layout: forarchive
+- text: Albums
+  url: ./albums
+  layout: albumlist
 - text: profile
-  url: /jekyll-theme-panda/about/
+  url: ./about/
 
 dropdown_header: BLOG #will only exist if dropdown array below has item(s)
 dropdown:

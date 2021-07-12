@@ -34,11 +34,13 @@
                 {% if site.dropdown != false %}
                 <li class="navi__lang js-lang">
                     <a class="navi__langLink" href="javascript:void(0);">{{site.dropdown_header}}</a>
-                    {% for item in site.dropdown %}
                     <div class="navi__langList">
+                        {% for item in site.dropdown %}
+
                         <span><a href="{{item.link}}">{{item.text}}</a></span>
+
+                        {% endfor %}
                     </div>
-                    {% endfor %}
                 </li>
                 {% endif %}
                 <li>
@@ -151,8 +153,8 @@
     initTheme();//avoid passing a white page if the intention is dark theme
     $(document).ready(function () {
         initTheme();
-    }) 
+    })
 
     console.log('[↓]BEGIN');
-    console.log("🐼This site is using jekyll-theme-panda ","{{site.theme_version}}" );
+    console.log("🐼This site is using jekyll-theme-panda ", "{{site.theme_version}}");
 </script>

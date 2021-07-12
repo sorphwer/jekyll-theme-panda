@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<body class="home blog lang-ja footer_mt">
+    <section class="home-message js-fadein">
+        <div class="home-message__ttl" id="whiteline">
+            <h2 id="white"></h2>
+
+        </div><!-- .home-message__ttl -->
+
+        <div>
+            {% if page.title != false %}
+            <div class="home-message__ttl" style="margin-top:10px">
+                <h2>{{page.title}}</h2>
+            </div><!-- .home-message__ttl -->
+            {% endif %}
+            {% if page.description != false %}
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        {% for item in page.description%}
+                        <p>
+                            {{item}}
+                        </p>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+
+        </div>
+    </section>
+    {% for photo in page.photos%}
+    <section class="home-message js-fadein">
+        <div>
+            <img class="album" src="{{photo.url}}">
+            <p class="u-txt__label" style="text-align: right;">{{ photo.description }}</p>
+        </div>
+    </section>
+    {% endfor %}
+
+
+</body>

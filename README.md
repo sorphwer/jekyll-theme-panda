@@ -38,6 +38,12 @@ Or install it yourself as:
 
 Clone this repo or download this repo in your computer, then edit files in `_post` and edit `_config.yml`.
 
+**Tips: Please keep using one level permalink:**
+```
+permalink: /:year-:month-:day-:title:output_ext
+```
+**Since navigation header uses relative path in default situation**
+
 ## Usage
 
 ### Available layouts:

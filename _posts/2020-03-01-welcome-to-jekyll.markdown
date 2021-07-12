@@ -35,7 +35,6 @@ To add new posts, simply add a file in the `_posts` directory that follows the c
   - Hide article in home page
   - Make article pinned at home page
   - Mark a custom status symbol
-  
 - Auto/Manual Dark/Light Mode 
 - Responsive design, optimized for mobile devices
 - Global search bar
@@ -44,6 +43,10 @@ To add new posts, simply add a file in the `_posts` directory that follows the c
 - Optional Mermaid support
 - Multilanguage Support
 - Emoji Support
+- Album mode post
+- Preset mode post
+- Highly custom config
+- Independent search tool
 
 # Ymal Configurations
 
@@ -51,8 +54,10 @@ TOC is enabled automatically, you can set such yaml head to disable it with `toc
 
 You can edit these attribution in yaml data of your markdown file:
 
+Available front matter argumeters for `post` layout:
+
 ```yaml
-layout: post
+layout: post # must be 'post'
 title:  "Welcome to RiinoSite3!"
 subtitle: "Features of RiinoSite3 Blog" #optional 
 author: "RiinoSite"    #optional
@@ -64,14 +69,27 @@ status: doc     #optional,if status is 'WIP', will display a WIP banner
 last-modify: 2020-01-04 10:30:00 +0000 #optional
 toc: true       #default: true
 sticky : true   #default: false
-hide: false     #default: false (hide from Home page only)
+hide: false     #default: false (hide from home page only)(old)
+hidden: false   #default: false (hide from both Home page and paginator, by jekyll-pagninate)
 mathjax: true   #default: true
 mermaid: true   #default: true
 banner-title: RiinoSite Blog #optional
 banner-subtitle: Readme.md #optional, must be with banner-title
 # toc options: inline, true, false
 ```
+Available front matter argumeters for `album` layout:
 
+```yaml
+---
+layout: album # must be 'album'
+title: title #optional, when not defined, title will be your filename, and if you do not need a title in album page, USE [].
+hidden: true # MUST be hidden if you have 'post' type posts.
+description: ['text1','text2'] # array, each element will be in a <p> tag
+photos:
+ - url: /img/ttt.img
+ - description: photo description
+---
+```
 Also, tags is enabled in archive page. Current version **do not** support space in tag.
 
 To edit min & max level of generated outline, please check `_config.yml`. Max level is 3 now.

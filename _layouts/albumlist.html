@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+{% assign album_list = site.posts | where: "layout","album"%}
+
+{% for post in album_list  %}
+
+    {% if post.layout == 'album' %}
+    <a href="{{ post.url | prepend: site.baseurl }}"  >
+        <p>{{post.title}}</p>
+    </a>
+    {% endif %}
+    
+
+{% endfor %}
