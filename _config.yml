@@ -4,8 +4,8 @@ title: jekyll-theme-panda
 author: riino
 email: riino@gmail.com
 SEOTitle: RiinoSite Theme
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/jekyll-theme-panda" # the subpath of your site, e.g. /blog
+url: "riino.site" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: twitter_name
 github_username: github_name 
 github_url: https://github.com/sorphwer
