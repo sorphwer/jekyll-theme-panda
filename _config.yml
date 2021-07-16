@@ -40,6 +40,9 @@ navigation:
 - text: Albums
   url: ./albums
   layout: albumlist
+- text: Presets
+  url: ./presets
+  layout: presetlist
 - text: profile
   url: ./about/
 

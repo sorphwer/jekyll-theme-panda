@@ -65,31 +65,24 @@ layout: default
     <section class="v-section"> </section>
     <section class="v-section-cover"></section>
 
+    {% if page.title != false %}
 
     <section class="home-message js-fadein">
         <div>
             <div class="home-message__ttl" style="margin-top:10px">
-                <h2>SHILIN FILTER IS?</h2>
+                <h2>{{ page.title }}</h2>
 
             </div><!-- .home-message__ttl -->
 
             <div class="container">
                 <div class="row">
+                    {% for paragraph in page.description %}
                     <div class="col-sm">
                         <p class="u-txt__label">
-                            Shilin filter is the first open LR/PS preset of Riino Lin.
-                            The main spirit comes from a experience editing photo took in Shilin,Taipei.
-                            The thought is to enhance the cool color and addding orrange in red,and cancel green.
-
+                            {{ paragraph }}
                         </p>
                     </div>
-                    <div class="col-sm">
-                        <p class="u-txt__label">
-                            士林フィルターは、リイノの最初のオープンLR / PSプリセットである。
-                            台北の士林夜市で撮影した写真を編集した経験から来ています。
-                            冷色を修正し、赤やオレンジ色の追加と強化、緑を弱くなることです。
-                        </p>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
             <div class="home-message__ttl">
@@ -103,13 +96,15 @@ layout: default
             <section style="height: 20vh;display: flex;align-items: center;justify-content: center;">
                 <button type="button" class="btn btn-light btn-lg" data-toggle="button" aria-pressed="false"
                     autocomplete="off"
-                    onclick="window.location.href='https://li.riino.site/download/Riino_BlackGold.zip'">
+                    onclick="window.location.href='{{page.download_url}}'">
                     Download
                 </button>
             </section>
         </div>
     </section>
+    {% endif %}
     <!--<section class="f-section" id="sec2">  </section>-->
+    {% if page.derivation != false %}
     <section class="v-section-70" id="shilin_bg">
         <section class="home-message js-fadein">
             <div>
@@ -119,17 +114,13 @@ layout: default
                 </div><!-- .home-message__ttl -->
                 <div class="container">
                     <div class="row">
+                        {% for paragraph in page.derivation %}
                         <div class="col-sm">
-                            <p class="u-txt__label" id="white">
-                                The origin preset is for night photograph.But it suprisingly works will in other cases.
-
+                            <p class="u-txt__label" >
+                                {{ paragraph }}
                             </p>
                         </div>
-                        <div class="col-sm">
-                            <p class="u-txt__label" id="white">
-                                元のプリセットは夜の写真用ですが、他の場合にも驚くほどうまくいきます。
-                            </p>
-                        </div>
+                        {% endfor %}
                     </div>
                 </div>
                 <div class="home-message__ttl" id="whiteline">
@@ -139,54 +130,30 @@ layout: default
             </div>
         </section>
     </section>
+    {% endif %}
 
-
+    {% for sample in page.samples %}
     <section class="home-message js-fadein">
 
         <div class="album">
-            <h2 class="u-ttl__02 u-ttl__dot">Atmosphere adjustment </h2>
-            <p class="u-txt__label">冷たい雰囲気を与える</p>
+            <h2 class="u-ttl__02 u-ttl__dot">{{ sample.title }}</h2>
+            <p class="u-txt__label">{{sample.subtitle}}</p>
 
         </div>
-        <img class="album" src="img/shilin_1.jpg">
-        <p class="u-txt__label" style="text-align: right;">@ Twatutia, Taipei, 2019</p>
+        <img class="album" src="{{sample.img_url}}">
+        <p class="u-txt__label" style="text-align: right;">{{sample.img_text}}</p>
     </section>
+    {% endfor %}
 
 
-    <section class="home-message js-fadein">
-        <div class="album">
-            <h2 class="u-ttl__02 u-ttl__dot">Sharpness addon</h2>
-            <p class="u-txt__label">シャープネスを追加</p>
-
-        </div>
-        <div>
-            <img class="album" src="img/shilin_2.jpg">
-            <p class="u-txt__label" style="text-align: right;">@ Tamsui,New Taipei City, 2019</p>
-        </div>
-    </section>
-
-    <section class="home-message js-fadein">
-        <div class="album">
-            <h2 class="u-ttl__02 u-ttl__dot">Portrait case</h2>
-            <p class="u-txt__label">肖像写真の場合も可能</p>
-
-        </div>
-        <div>
-            <img class="album" src="img/shilin_3.jpg">
-            <p class="u-txt__label" style="text-align: right;">@"Wangyou Valley",Keelung, 2019</p>
-        </div>
-    </section>
 
 
 
     <section style="text-align: center;">
         <button type="button" class="btn btn-outline-light btn-lg" data-toggle="button" aria-pressed="false"
-            autocomplete="off" onclick="window.location.href='https://li.riino.site/download/Riino_BlackGold.zip'">
+            autocomplete="off" onclick="window.location.href='{{page.download_url}}'">
             Download
         </button>
     </section>
-
-
-
 
 </body>

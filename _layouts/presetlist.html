@@ -2,15 +2,12 @@
 layout: default
 ---
 
-{% assign list = site.posts | where: "layout","album"%}
+{% assign list = site.posts | where: "layout","preset"%}
 
 {% for post in list  %}
-
 
     <a href="{{ post.url | prepend: site.baseurl }}"  >
         <p>{{post.title}}</p>
     </a>
-
     
-
 {% endfor %}
