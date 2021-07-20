@@ -76,10 +76,10 @@ body {
   padding: 0;
   background: var(--main-background-color) !important;
   background-color: var(--main-background-color) !important;
-  font-family: Segoe UI,SegoeUI,Helvetica Neue, Helvetica, Arial, "PingFang SC","Hiragino Kaku Gothic ProN", "游ゴシック", YuGothic, Meiryo, sans-serif !important;
+  // font-family: Segoe UI,SegoeUI,Helvetica Neue, Helvetica, Arial, "PingFang SC","Hiragino Kaku Gothic ProN", "游ゴシック", YuGothic, Meiryo, sans-serif !important;
 
- /*font-family: font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
-*/
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
+
   font-weight: 400;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -93,6 +93,7 @@ body {
   font-feature-settings: "palt";
   -webkit-font-feature-settings: normal\9;
   font-feature-settings: normal\9;
+  scroll-behavior: smooth !important;
 }
 
 /* .home-message__ttl a h2:hover{

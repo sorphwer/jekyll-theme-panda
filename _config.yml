@@ -3,9 +3,9 @@
 title: jekyll-theme-panda
 author: riino
 email: riino@gmail.com
-SEOTitle: RiinoSite Theme
+SEOTitle: jekyll-theme-panda demo
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://riino.site" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: twitter_name
 github_username: github_name 
 github_url: https://github.com/sorphwer
@@ -31,7 +31,7 @@ sass:
     style: compressed
 
 navigation:
-- text: Home
+- text: Blogs
   url: ./index.html
   layout: home
 - text: Archive
@@ -40,18 +40,20 @@ navigation:
 - text: Albums
   url: ./albums
   layout: albumlist
-- text: Presets
-  url: ./presets
-  layout: presetlist
+# - text: Presets
+#   url: ./presets
+#   layout: presetlist
+# - text: Visios
+#   url: ./visios
 - text: profile
   url: ./about/
 
 dropdown_header: BLOG #will only exist if dropdown array below has item(s)
 dropdown:
 - text: drop1.
-  url: 
+  url: example.com
 - text: drop2.
-  url:
+  url: example.com
 
 footer_text:
 - jekyll-theme-panda demo by Riino

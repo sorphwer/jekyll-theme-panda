@@ -12,15 +12,17 @@ banner-subtitle: Dev Backlog
 last-modify: 2021-07-10 10:30:00 +0000
 
 ---
-## Ver. Panda-0.2 (WIP)
+## Ver. Panda-0.2.0 (WIP)
 
 - Feat: New layout : blank (default layout without header and footer)
 - Feat: New layout : album
 - Feat: New layout : albumlist
 - Feat: New layout : preset
 - Feat: New layout : presetlist
+- Feat/Dependency: smooth in-page jump via jquery-ui 
 - Refactpr: Config refactor
 - Fix: dropdown liquid issue
+- Fix: Fix Simplified Chinese Font by rolling back font family
 
 ## Ver. Panda-0.1.0
 

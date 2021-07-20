@@ -2,9 +2,9 @@
 layout: default
 ---
 
-{% assign album_list = site.posts | where: "layout","album"%}
+{% assign list = site.posts | where: "layout","visio"%}
 
-{% for post in album_list  %}
+{% for post in list  %}
 
     {% if post.layout == 'visio' %}
     <a href="{{ post.url | prepend: site.baseurl }}"  >

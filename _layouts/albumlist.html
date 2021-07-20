@@ -3,14 +3,52 @@ layout: default
 ---
 
 {% assign list = site.posts | where: "layout","album"%}
-
-{% for post in list  %}
-
-
-    <a href="{{ post.url | prepend: site.baseurl }}"  >
-        <p>{{post.title}}</p>
-    </a>
-
-    
-
-{% endfor %}
+<div class="album-slider">
+    {% for post in list %}
+    <div>
+        <a href="{{ post.url | prepend: site.baseurl }}">
+            <div>{{post.title}}</div>
+            {% if post.cover_number  %}
+                {% if post.cover_number >= post.photos.size %}
+                    {% assign cover_number = -1 %} 
+                {% else %}
+                    {% assign cover_number = post.cover_number %}
+                {% endif %}
+            {% else %}
+                {% assign cover_number = 0 %} 
+            {% endif %}
+            {% assign cover_url = post.photos[cover_number].url %}
+            <img src="{{ cover_url }}" >
+        </a>
+    </div>
+    {% endfor %}
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.album-slider').slick({
+            centerMode: true,
+            centerPadding: '60px',
+            slidesToShow: 3,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+    });
+</script>
