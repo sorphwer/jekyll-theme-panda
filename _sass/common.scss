@@ -22,6 +22,7 @@ html {
     --link-color:rgb(0, 112, 201);
     --main-background-color:#FFF;
     --footer-color:#FFF;
+    --light-color:#cfcfcf;
     --main-text-color:#000;
     --post-title-color:#282828;
     --message-border-color:#000;
@@ -32,6 +33,7 @@ html {
     --link-color:rgb(100, 210, 255);
     --main-background-color:#171717;
     --footer-color:#282828;
+    --light-color:#4a4a4a;
     --main-text-color:#FFF;
     --post-title-color:#FFF;
     --message-border-color:#282828;
@@ -44,6 +46,7 @@ html {
     --link-color:rgb(0, 112, 201);
     --main-background-color:#FFF;
     --footer-color:#FFF;
+    --light-color:#cfcfcf;
     --main-text-color:#000;
     --post-title-color:#282828;
     --message-border-color:#000;
@@ -53,6 +56,7 @@ html {
       --link-color:rgb(0, 112, 201);
       --main-background-color:#FFF;
       --footer-color:#FFF;
+      --light-color:#cfcfcf;
       --main-text-color:#000;
       --post-title-color:#282828;
       --message-border-color:#000;
@@ -63,6 +67,7 @@ html {
       --link-color:rgb(100, 210, 255);
       --main-background-color:#171717;
       --footer-color:#282828;
+      --light-color:#4a4a4a;
       --main-text-color:#FFF;
       --post-title-color:#FFF;
       --message-border-color:#282828;
@@ -95,6 +100,28 @@ body {
   font-feature-settings: normal\9;
   scroll-behavior: smooth !important;
 }
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent; 
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background: transparent;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+
+
+body:hover::-webkit-scrollbar-thumb {
+  background: var(--light-color); 
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: var(--link-color); 
+}
+
 
 /* .home-message__ttl a h2:hover{
   border-bottom:1px solid var(--link-color)!important;

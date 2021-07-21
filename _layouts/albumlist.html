@@ -5,20 +5,38 @@ layout: default
 {% assign list = site.posts | where: "layout","album"%}
 <div class="album-slider">
     {% for post in list %}
+        {% if post.cover_number %}
+            {% if post.cover_number >= post.photos.size %}
+                {% assign cover_number = -1 %}
+            {% else %}
+                {% assign cover_number = post.cover_number %}
+            {% endif %}
+        {% else %}
+            {% assign cover_number = 0 %}
+    {% endif %}
+    {% assign cover_url = post.photos[cover_number].url %}
+        <div  href="{{ post.url | prepend: site.baseurl }}"
+            background-image:url({{ cover_url }})>
+            <h3>{{post.title}}</h3>
+
+            <img  src="{{ cover_url }}">
+        </div>
+    {% endfor %}
+    {% for post in list %}
     <div>
         <a href="{{ post.url | prepend: site.baseurl }}">
-            <div>{{post.title}}</div>
-            {% if post.cover_number  %}
-                {% if post.cover_number >= post.photos.size %}
-                    {% assign cover_number = -1 %} 
-                {% else %}
-                    {% assign cover_number = post.cover_number %}
-                {% endif %}
+            <h3>{{post.title}}</h3>
+            {% if post.cover_number %}
+            {% if post.cover_number >= post.photos.size %}
+            {% assign cover_number = -1 %}
             {% else %}
-                {% assign cover_number = 0 %} 
+            {% assign cover_number = post.cover_number %}
+            {% endif %}
+            {% else %}
+            {% assign cover_number = 0 %}
             {% endif %}
             {% assign cover_url = post.photos[cover_number].url %}
-            <img src="{{ cover_url }}" >
+            <img src="{{ cover_url }}">
         </a>
     </div>
     {% endfor %}
@@ -26,9 +44,8 @@ layout: default
 <script type="text/javascript">
     $(document).ready(function () {
         $('.album-slider').slick({
-            centerMode: true,
-            centerPadding: '60px',
-            slidesToShow: 3,
+            lazyLoad: 'ondemand',
+            slidesToShow: 1,
             responsive: [
                 {
                     breakpoint: 768,

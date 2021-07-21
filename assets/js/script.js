@@ -14,10 +14,9 @@ function pageLoaded() {
 // fadeout page on link clicked
 // https://digipress.digi-state.com/tech/page-transition-effect-how-to/
 function pageTransition() {
-  // ハッシュリンク(#)と別ウィンドウでページを開く場合はスルー
   $('a:not([href^="#"]):not([href^="javascript:void(0);"]):not([target]):not(.js-no-transition)').on('click', function(e){
     // $('html, body').stop().animate({ scrollTop: 0 }, 400, 'easeInOutSine');
-    e.preventDefault(); // ナビゲートをキャンセル
+    e.preventDefault(); 
     url = $(this).attr('href'); // 遷移先のURLを取得
     if (url !== '') {
       //$('main,footer,.menu').addClass('js-fadeOut');
