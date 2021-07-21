@@ -4506,3 +4506,39 @@ footer {
     margin-bottom: 0;
   }
 }
+
+// .album-container.scroll{
+//   perspective: 1px;
+
+//   transform-style: preserve-3d;
+//   .album-section{
+//     transform: translate3D(-50%, -120px, -1px) scale(2);
+//   }
+// }
+.album-section{
+  background-size: cover;
+  .album-title{
+    color: white !important;
+  }
+
+  .album-corner{
+    margin-top: 3rem;
+    height: 25rem;
+    width: 18rem;
+    border-style: solid;
+    border-color: white;
+    border-width: 1.5ex 1.5ex 2.5ex;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    backdrop-filter: brightness(0.9);
+  }
+
+  .album-corner:hover{
+    background-color: rgba(255, 255, 255, 0.397);
+    padding-top: -3ex;
+  }
+  .album-enter{
+    color: white !important;
+    transform: translateY(-3em);
+  }
+}
