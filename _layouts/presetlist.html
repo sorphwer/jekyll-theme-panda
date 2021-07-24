@@ -3,11 +3,65 @@ layout: default
 ---
 
 {% assign list = site.posts | where: "layout","preset"%}
-
+{% assign counter = 0 %}
+<div id="preset-slider">
 {% for post in list  %}
+    {% assign counter = counter | plus:1 %}
 
-    <a href="{{ post.url | prepend: site.baseurl }}"  >
+    <!-- <a href="{{ post.url | prepend: site.baseurl }}"  >
         <p>{{post.title}}</p>
-    </a>
-    
+    </a> -->
+
+    <section class="home-kanban"
+    style="background-image: url(.{{ post.derivation_img}})">
+        <div class="home-kanban__inner">
+            <div class="home-kanban__bg sp">
+            </div><!-- .home-kanban__bg -->
+            <div class="home-kanban__ttl">
+                <h2 class="u-ttl__02" style="color: white !important;">{{post.title}}</h2>
+                <p class="u-txt__label">{{post.description[0] | truncate: 150 }}</p>
+                <p class="u-txt__link u-txt__link--blank">
+                    <a href="{{ post.url | prepend: site.baseurl }}" target="_blank">Learn more & Download </a>
+                    <h2 class="u-ttl__02 u-ttl__number" style="text-align: end; color: white !important;">{{counter}} / {{list | size}}</h2>
+                </p>
+            </div><!-- .home-kanban__ttl -->
+        </div>
+    </section>
+
 {% endfor %}
+</div>
+<style>
+    .slick-dots{
+        bottom: -27vh !important;
+    }
+    h2{
+        color: white;
+    }
+</style>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#preset-slider').slick({
+            lazyLoad: 'ondemand',
+            slidesToShow: 1,
+            dots: true,
+            // autoplay: true,
+            autoplaySpeed: 2000,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        arrows: false,
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+    });
+</script>

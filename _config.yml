@@ -40,9 +40,9 @@ navigation:
 - text: Albums
   url: ./albums
   layout: albumlist
-# - text: Presets
-#   url: ./presets
-#   layout: presetlist
+- text: Presets
+  url: ./presets
+  layout: presetlist
 # - text: Visios
 #   url: ./visios
 - text: profile

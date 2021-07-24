@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: blank
 ---
 
 <script>
@@ -24,13 +24,12 @@ layout: default
                 var yOffset = 25;
 
                 $(".v-section-cover").css("width", ((mousePos.x + xOffset) / $(".v-section").width()) * 100 + "%");
-                console.log((mousePos.x) / $(".v-section").width());
+
             });
             //鼠标离开未被遮挡位置
             $(".v-section").mouseout(function () {
                 // $("#tooltip").empty();
                 // $("#tooltip").css("display","none");
-                console.log("mouse left uncovered");
             });
             //////////////////////////////////////////////////////////////
             //鼠标在被遮挡的位置：
@@ -41,7 +40,7 @@ layout: default
                 var yOffset = 25;
 
                 $(".v-section-cover").css("width", ((mousePos.x + xOffset) / $(".v-section").width()) * 100 + "%");
-                console.log((mousePos.x) / $(".v-section").width());
+                // console.log((mousePos.x) / $(".v-section").width());
 
 
             });
@@ -49,7 +48,7 @@ layout: default
             $(".v-section-cover").mouseout(function () {
                 // $("#tooltip").empty();
                 // $("#tooltip").css("display","none");
-                console.log("mouse left covered");
+
             });
 
         });
@@ -62,12 +61,13 @@ layout: default
 
 <body class="home blog lang-ja footer_mt">
 
-    <section class="v-section"> </section>
-    <section class="v-section-cover"></section>
+    <section class="v-section" style="background-image: url({{ page.cover_before}})"> </section>
+    <section class="v-section-cover" style="background-image: url({{ page.cover_after}})"></section>
+    <p class="down-arrow">↓↓↓</p>
 
     {% if page.title != false %}
 
-    <section class="home-message js-fadein">
+    <section class="home-message js-fadein" style="padding:0;">
         <div>
             <div class="home-message__ttl" style="margin-top:10px">
                 <h2>{{ page.title }}</h2>
@@ -105,11 +105,11 @@ layout: default
     {% endif %}
     <!--<section class="f-section" id="sec2">  </section>-->
     {% if page.derivation != false %}
-    <section class="v-section-70" id="shilin_bg">
+    <section class="v-section-70" style="background-image: url(.{{ page.derivation_img}})">
         <section class="home-message js-fadein">
             <div>
                 <div class="home-message__ttl" id="whiteline">
-                    <h2 id="white">DERIVATION</h2>
+                    <h2 style="color: white !important;">DERIVATION</h2>
 
                 </div><!-- .home-message__ttl -->
                 <div class="container">
