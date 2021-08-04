@@ -48,12 +48,12 @@ navigation:
 - text: profile
   url: ./about/
 
-dropdown_header: BLOG #will only exist if dropdown array below has item(s)
+dropdown_header: Theme #will only exist if dropdown array below has item(s)
 dropdown:
-- text: drop1.
-  url: example.com
-- text: drop2.
-  url: example.com
+- text: Blog
+  url: https://riino.site
+- text: Photo
+  url: https://li.riino.site
 
 footer_text:
 - jekyll-theme-panda demo by Riino
