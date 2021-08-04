@@ -2,6 +2,12 @@
 
 [![Gem Version](https://badge.fury.io/rb/jekyll-theme-panda.svg)](https://badge.fury.io/rb/jekyll-theme-panda)  ![](https://ruby-gem-downloads-badge.herokuapp.com/jekyll-theme-panda?type=total)
 
+DEMO 1： [RiinoSite Blog](https://riino.site/)
+
+DEMO 2： [low illuminance](https://li.riino.site/)
+
+[TOC]
+
 ## Installation
 
 ### Choice 1 : Set up via jekyll-remote-theme
@@ -33,7 +39,7 @@ And then execute:
 Or install it yourself as:
 
     $ gem install jekyll-theme-panda
-    
+
 ### Choice 3 : Directly use this repo 
 
 Clone this repo or download this repo in your computer, then edit files in `_post` and edit `_config.yml`.
@@ -44,25 +50,97 @@ permalink: /:year-:month-:day-:title:output_ext
 ```
 **Since navigation header uses relative path in default situation**
 
-## Usage
+## YAML front matter example
+
+### post
+
+```yaml
+---
+layout: post
+title:  "Theme Showcase"
+subtitle: "Features and yaml configuration demo" #optional 
+author: "RiinoSite"    #optional
+date:   2020-03-01 17:08:09 +0800
+tags:           #optional
+- jekyll 
+- doc
+status: doc     #optional,if status is 'WIP', will display a WIP banner
+last-modify: 2020-07-10 10:30:00 +0000 #optional
+toc: true       #default: true
+sticky : true   #default: false
+hide: false     #default: false (hide from Home page only)
+mathjax: true   #default: true
+mermaid: true   #default: true
+banner-title: THEME DOC #optional
+banner-subtitle: Readme.md #optional, must be with banner-title
+# toc options: inline, true, false
+---
+```
+
+### album
+
+```yaml
+---
+layout: album
+title: Postcard Series 2019
+hidden: true #must be true
+description: ['text1','text2']
+cover_number: 2 #determine which image will be the cover
+photos:
+ - url: /img/albums/postcard/poster-1.jpg
+   description: photo description
+ - url: /img/albums/postcard/poster-11.jpg
+   description: photo description
+---
+```
+
+### preset
+
+```yaml
+---
+layout: preset
+title: Shilin Filter
+cover_before: /img/presets/shilin/shilin_before.jpg
+cover_after: /img/presets/shilin/shilin_after.jpg
+hidden: true #must be true
+description: ['text']
+download_url: google.com
+derivation: ['text']
+derivation_img : ./img/presets/shilin/shilin_after_1.jpg
+samples:
+ - title: 'Atmosphere adjustment'
+   subtitle: '冷たい雰囲気を与える'
+   img_url: '/img/presets/shilin/shilin_1.jpg'
+   img_text: '@ Twatutia, Taipei, 2019'
+---
+```
+
+
+
+## Toolkits
 
 ### Available layouts:
 
-| name       | description         | filename        |
-| ---------- | ------------------- | --------------- |
-| default    | default layout      | default.html    |
-| home       | index page layout   | home.html       |
-| forarchive | archive page layout | forarchive.html |
-| post       | post page layout    | post.html       |
+| name       | description                                              | filename                 |
+| ---------- | -------------------------------------------------------- | ------------------------ |
+| default    | default layout with contents in a `home-message` section | _layouts\default.html    |
+| home       | index page layout                                        | _layouts\home.html       |
+| forarchive | archive page layout                                      | _layouts\forarchive.html |
+| post       | post page layout                                         | _layouts\post.html       |
+| blank      | default layout without `home-message` section            | _layouts\blank.html      |
+| preset     | preset introduction page layout                          | _layouts\preset.html     |
+| presetlist | presets page layout                                      | _layouts\presetlist.html |
+| album      | album page layout                                        | _layouts\album.html      |
+| albumlist  | albums page layout                                       | _layouts\albumlist.html  |
 
 **Available includes(html):**
 
-| name   | description                                   | filename    |
-| ------ | --------------------------------------------- | ----------- |
-| footer | footer component, can be edited in _config    | footer.html |
-| head   | head tag                                      | home.html   |
-| header | navigator component, can be edited in _config | header.html |
-| search | search bar plug-in                            | search.html |
+| name   | description                                   | filename              |
+| ------ | --------------------------------------------- | --------------------- |
+| footer | footer component, can be edited in _config    | _includes\footer.html |
+| head   | head tag                                      | _includes\home.html   |
+| header | navigator component, can be edited in _config | _includes\header.html |
+| search | search bar plug-in                            | _includes\search.html |
 
 **Available includes(md):**
 
@@ -86,6 +164,8 @@ We suggest fork this repo and set it as your own **remote_theme** to modify this
 ## About Search Tool
 
 `jekyll-theme-panda` is currently use [jekyll-search-bar](https://github.com/sorphwer/jekyll-search-bar) hosted in riino.site in default mode. To modify this search tool, please check the corresponding github page.
+
+Notice: Search tool can only be used within `post` type posts. To disable search tool, create a blank `search.json` in your root.
 
 ## License
 
