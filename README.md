@@ -2,9 +2,14 @@
 
 [![Gem Version](https://badge.fury.io/rb/jekyll-theme-panda.svg)](https://badge.fury.io/rb/jekyll-theme-panda)  ![](https://ruby-gem-downloads-badge.herokuapp.com/jekyll-theme-panda?type=total)
 
+Theme Showcase : [RiinoSite - Jeklyy-Theme-Panda](https://riino.site/jekyll-theme-panda/)
+
 DEMO 1： [RiinoSite Blog](https://riino.site/)
 
 DEMO 2： [low illuminance](https://li.riino.site/)
+
+
+**! Notes: Currently the mathjax.js might be unavailable in your blog, please use it locally or change CDN url in your own projects. We will fix this in next version.**
 
 [TOC]
 

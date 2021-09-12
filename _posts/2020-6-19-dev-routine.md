@@ -12,6 +12,13 @@ banner-subtitle: Dev Backlog
 last-modify: 2021-07-10 10:30:00 +0000
 
 ---
+
+## Ver. Panda-0.2.1
+
+ - Fix: Mathjax.js issue
+
+ ! **Notes: Currently the mathjax.js might be unavailable in your blog, please use it locally or change CDN url in your own projects. We will fix this in next version.**
+
 ## Ver. Panda-0.2.0 
 
 - Feat: New layout : blank (default layout without header and footer)
