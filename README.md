@@ -78,6 +78,7 @@ mathjax: true   #default: true
 mermaid: true   #default: true
 banner-title: THEME DOC #optional
 banner-subtitle: Readme.md #optional, must be with banner-title
+never-expired: false #default fause, if ture , expired banner will not display
 # toc options: inline, true, false
 ---
 ```

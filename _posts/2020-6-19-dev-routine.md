@@ -9,9 +9,16 @@ status: Live
 sticky : true
 banner-title: THEME DOC
 banner-subtitle: Dev Backlog
-last-modify: 2021-07-10 10:30:00 +0000
+last-modify: 2022-02-3 10:30:00 +0000
+never-expired: true
 
 ---
+
+## Ver. Panda-0.2.2 （incoming）
+
+ - Fix TOC panelS
+ - Code Snippet Style
+ - New Ymal attribution `never-expired`
 
 ## Ver. Panda-0.2.1
 

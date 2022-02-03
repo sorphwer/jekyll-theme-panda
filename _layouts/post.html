@@ -90,14 +90,16 @@ layout: default
             {% assign curr_date = curr_date | minus: post_date %}
             {% capture time %}{{curr_date|minus: post_date}}{%endcapture%}
             {% if curr_date>1 %}
-            <div class="d-flex banner">
-                <img src="/assets/img/banner.gif" class="warning-image p-2 flex-fill bd-highlight banner-image">
-                <div class="p-2 flex-fill bd-highlight ">
-                    <h1 class="banner-text" style="color: #e83e8c !important;"><i class="fa fa-exclamation-triangle"
-                            style="color: #e83e8c !important;font-size: 2.5rem;" aria-hidden="true"></i> Expired</h1>
-                    <p class="banner-text">Post published over one year ago</p>
+                {% unless page.never-expired %}
+                <div class="d-flex banner">
+                    <img src="/assets/img/banner.gif" class="warning-image p-2 flex-fill bd-highlight banner-image">
+                    <div class="p-2 flex-fill bd-highlight ">
+                        <h1 class="banner-text" style="color: #e83e8c !important;"><i class="fa fa-exclamation-triangle"
+                                style="color: #e83e8c !important;font-size: 2.5rem;" aria-hidden="true"></i> Expired</h1>
+                        <p class="banner-text">Post published over one year ago</p>
+                    </div>
                 </div>
-            </div>
+                {% endunless %}
             {%endif%}
 
             <!-- expired banner -->
