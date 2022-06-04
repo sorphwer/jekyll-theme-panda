@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-panda"
-  spec.version       = "0.2.2"
+  spec.version       = "0.2.3"
   spec.authors       = ["riino"]
   spec.email         = ["sorphwer@gmail.com"]
 
@@ -15,3 +15,9 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "jekyll", "~> 4.1"
   spec.add_runtime_dependency "jekyll-paginate", "~> 1.1.0"
 end
+
+#compile
+#gem build jekyll-theme-panda.gemspec
+
+#push
+#gem push jekyll-theme-panda-0.x.x.gem
