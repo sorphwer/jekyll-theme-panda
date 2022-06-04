@@ -29,7 +29,22 @@ never-expired: true
    - Tree view/Diff view/Terminal view
 
    For full feature please visit *Theme Showcase* , to customize prism plugin please refer to https://prismjs.com/
+   
+- Known issues:
 
+  - Since path issue (all assets file will be wrapped by remote-theme), `mathjax` font can not load successfully.
+  
+  - User have to manually disable default rouge by editing `_config`:
+  
+    ```yml
+    markdown: kramdown
+    kramdown:
+       syntax_highlighter_opts:
+          disable : true
+    ```
+  
+  - Scroll bar style of code block is missing
+  
    
 
 

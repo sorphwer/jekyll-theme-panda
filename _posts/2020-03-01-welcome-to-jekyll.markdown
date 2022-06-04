@@ -131,7 +131,7 @@ print_hi('Tom')
 ```
 Supported prismjs plugins list:
 
-![image](/img/prism-plugins.png)
+![image](/jekyll-theme-panda/img/prism-plugins.png)
 
 ## Latex
 
