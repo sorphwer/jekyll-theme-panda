@@ -10,13 +10,18 @@ twitter_username: twitter_name
 github_username: github_name 
 github_url: https://github.com/sorphwer
 repo_url: https://github.com/sorphwer/jekyll-theme-panda
-theme_version: 0.1.1
+theme_version: 0.2.2
 permalink: /:year-:month-:day-:title:output_ext
 # Build settings
+# markdown: kramdown
+# kramdown:
+#   input: GFM
+#   syntax_highlighter: rouge
+
 markdown: kramdown
 kramdown:
-  input: GFM
-  syntax_highlighter: rouge
+   syntax_highlighter_opts:
+      disable : true
 plugins:
   - jekyll-feed
   - jekyll-paginate
@@ -32,21 +37,21 @@ sass:
 
 navigation:
 - text: Blogs
-  url: ./index.html
+  url: /index.html
   layout: home
 - text: Archive
-  url: ./archive
+  url: /archive
   layout: forarchive
 - text: Albums
-  url: ./albums
+  url: /albums
   layout: albumlist
 - text: Presets
-  url: ./presets
+  url: /presets
   layout: presetlist
 # - text: Visios
 #   url: ./visios
-- text: profile
-  url: ./about/
+
+
 
 dropdown_header: Theme #will only exist if dropdown array below has item(s)
 dropdown:

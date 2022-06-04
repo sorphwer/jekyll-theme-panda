@@ -79,7 +79,7 @@ banner-title: RiinoSite Blog #optional
 banner-subtitle: Readme.md #optional, must be with banner-title
 # toc options: inline, true, false
 ```
-<center> Current version **do not** support space in tag.</center>
+<center> Current version DO NOT support space or '/' in tag.</center>
 
 Available front matter parameters for `album` layout:
 
@@ -121,16 +121,18 @@ To edit min & max level of generated outline, please check `_config.yml`. Max le
 
 ## Code Highlight
 
-Code highlight is supported by `rouge`.
+Code highlight is supported by `prismjs`.
 
-```ruby
-def print_hi(name)
-  puts "Hi, #{name}"
-end
+```python
+def print_hi(name):
+  print('Hi,',name)
 print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
-
 ```
+Supported prismjs plugins list:
+
+![image](/img/prism-plugins.png)
+
 ## Latex
 
 Latex formatter is supported by `mathjax`, such latex block need two extra enter to create isolated paragraph.

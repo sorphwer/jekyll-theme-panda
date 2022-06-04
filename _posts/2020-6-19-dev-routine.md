@@ -13,18 +13,36 @@ last-modify: 2022-02-3 10:30:00 +0000
 never-expired: true
 
 ---
+## Ver. Panda-0.2.3
 
-## Ver. Panda-0.2.2 （incoming）
+ - Fix: Floating TOC panel is back as old version works when `toc` is true or default.
 
- - Fix TOC panelS
- - Code Snippet Style
+ - Fix: `mathjax` is now deployed **completely** in local, no more CDN issues.
+
+ - Refactor: Remove rouge highlight
+
+ - Feat: Completely new Code Snippet Style, supported by prism.js, including:
+
+   - Better syntax highlight theme, auto clickable url, show language name
+   - Copy to clipboard button
+   - Line number
+   - Tree view/Diff view/Terminal view
+
+   For full feature please visit *Theme Showcase* , to customize prism plugin please refer to https://prismjs.com/
+
+   
+
+
+## Ver. Panda-0.2.2 
+
+
  - New Ymal attribution `never-expired`
 
 ## Ver. Panda-0.2.1
 
- - Fix: Mathjax.js issue
+ - Fix: Mathjax.js issue by replace CDN url
 
- ! **Notes: Currently the mathjax.js might be unavailable in your blog, please use it locally or change CDN url in your own projects. We will fix this in next version.**
+
 
 ## Ver. Panda-0.2.0 
 
@@ -34,7 +52,7 @@ never-expired: true
 - Feat: New layout : preset
 - Feat: New layout : presetlist
 - Feat/Dependency: smooth in-page jump via jquery-ui 
-- Refactpr: Config refactor
+- Refactor: Config refactor
 - Fix: dropdown liquid issue
 - Dependency:  add skroll.js
 
@@ -42,11 +60,11 @@ never-expired: true
 
 - Rename theme
 
-- Refactor of link to [jekyll-search-bar](https://github.com/sorphwer/jekyll-theme-panda)
+- Refactor:  link to [jekyll-search-bar](https://github.com/sorphwer/jekyll-theme-panda)
 
-- Add [theme doc](https://github.com/sorphwer/jekyll-theme-panda)
+- Feat: Add [theme doc](https://github.com/sorphwer/jekyll-theme-panda)
 
-- Add theme [demo](https://riino.site/jekyll-theme-panda/)
+- Feat: Add theme [demo](https://riino.site/jekyll-theme-panda/)
 
 ## Ver. 3.2
 

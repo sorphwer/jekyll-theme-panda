@@ -2,9 +2,14 @@
 layout: default
 ---
 {%if page.mathjax != false %}
-<script async src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script>window.MathJax = {
+<!-- <script type="text/javascript" id="MathJax-script" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.1/es5/tex-chtml-full.min.js">
+</script> -->
+
+<link rel="stylesheet" href="{{ "assets/css/prism.css" | prepend: site.baseurl }}">
+<script src="{{ "assets/js/prism.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript" id="MathJax-script" async src="{{ "assets/js/tex-chtml-full.min.js" | prepend: site.baseurl }}"></script>
+<script>MathJax = {
     tex: {
       inlineMath: [['$', '$'], ['\\(', '\\)']]
     },
@@ -12,6 +17,14 @@ layout: default
       fontCache: 'global'
     }
   };</script>
+  <!-- <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        }
+    });
+</script> -->
   {%endif%}
 <!-- {%if page.mathjax != false %}
 <script 
@@ -71,7 +84,7 @@ layout: default
             {% include toc.html html=content class='toc' h_max=3 %}
         </div>
         {% endif %}
-        <div id="markdown-content">
+        <div id="markdown-content" class = "line-numbers">
 
             <!-- custom banner -->
             {% if page.banner-title%}
@@ -120,5 +133,85 @@ layout: default
         </div>
 
     </div>
-    
+    <script type="text/javascript">
+        Prism.plugins.filterHighlightAll.add(function (env) {
+            return env.language !== 'mermaid';
+        });
+
+        function initSidebar() {
+          // var sidebarLength = $('.sidebar_catelog').width();
+          var titleHeight = $('.home-message__ttl').height();
+          //move sidebar to right:
+          $('.sidebar_catelog').css("margin-left", $('#markdown-content').width() + 50);
+          //for everything in this html will be in a layout with left/right marging, set negetive margin to let sidebar break this border.
+          $('.sidebar_catelog').css("margin-right", "-200px");
+          //replace content into toc.
+          $('.sidebar_catelog').html($('#table-of-contents').html());
+          //hide origin toc on the head of the article.
+          $('#table-of-contents').css("visibility", "hidden");
+          $('#markdown-content').css("margin-top", -$("#table-of-contents").height()*1);//###########################This is in experiment##############
+          //because sidebar is a stiky-top class,set a wedge to creat space between it to the top.
+          $('.sidebar_catelog').prepend("<div class='wedge'></div>")
+          $('.wedge').css("height", "250px");
+          //for the first wedge will create space for every component, use negetive margin to rise toe content:
+          $('.main-body').css("margin-top",  -($("#table-of-contents").height()+250));
+          //for the last rising operation will make footer in wrong place, set another wedge to fix it.
+          $('.js-fadein').append("<section class='wedge-main'></section>");
+          $('.wedge-main').css("height", "250px");
+      
+      
+          //$('.sidebar_catelog').find("li").addClass('toc');
+          //alert($('#table-of-contents').find("a").html());
+      
+        }
+      
+        // function shiftBanner() {
+        //   let shift = ($(".home-message").outerWidth(true) - $(".home-message").outerWidth()) / 2;
+        //   $('#banner').css("left", -shift + "px");
+        //   console.log("shift:" + shift);
+        // }
+      
+        /*Riino learnt this from https://creeperdance.github.io/2017/05/jekyll-catalog.html
+        */
+        function locateCatelogList() {
+          var alis = $('#markdown-content :header');
+          var sidebar_alis = $('.sidebar_catelog').find('a');
+          var scroll_height = $(window).scrollTop();
+          for (var i = 0; i < alis.length; i++) {
+            var a_height = $(alis[i]).offset().top;
+            if (a_height < scroll_height) {
+              sidebar_alis.removeClass('list_click');
+      
+              $(sidebar_alis[i]).addClass('list_click');
+      
+            }
+          }
+        }
+      
+        $(function () {
+          // $('img').css('width',$('#table-of-contents').width())
+          // shiftBanner();
+          $('#table-of-contents').find("li").addClass('toc');
+      
+          if (typeof $('.sidebar_catelog').html() === 'undefined' || $(window).width() < 1000) {
+            console.log("[POST] toc disabled");
+            $('.container').prepend('<section style="height: 50px;"></section>');
+            $('#front-wedge').css('height', 100);
+          }
+          else {
+            initSidebar();
+      
+            $(window).bind('scroll', locateCatelogList);
+          }
+          //$('#table-of-contents').find('a').css('color', 'black');
+      
+          //marmaid
+          // mermaid.init(undefined, $('.language-mermaid'));
+          $('.language-mermaid').parent().css('text-align','center');
+      
+      
+        });
+      
+      
+      </script>
 </section>

@@ -1,9 +1,14 @@
-## 隐私协议
+## 条款
 
-本网站不会主动收集您的个人信息，包括访问IP，设备类型以及浏览器类型。
+请访问 https://github.com/sorphwer/jekyll-theme-panda 获取更多细节。
 
-本网站通过 Jekyll 实现。
+## 协议
 
-然而，请注意如果您使用任何嵌入的评论系统，则您的操作会受到所提供服务的第三方的服务器。
+Copyright {{ "now" | date: "%Y" }} Riino Zhang
 
-除此之外，您的访问IP及其地理位置会被 DNS 服务器收集。
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+

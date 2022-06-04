@@ -222,7 +222,19 @@ p {
     background: var(--main-text-color);
   }
 }
-
+.token.tag{
+  border: inherit;
+  border-radius: 0;
+  padding: 0;
+  color: inherit;
+  &:hover {
+    border: 0px  solid;
+    border-radius: 0px;
+    padding: 0;
+    color: inherit;
+    background: inherit;
+  }
+}
 .edit-button {
   color: black;
   font-size: 1rem;
