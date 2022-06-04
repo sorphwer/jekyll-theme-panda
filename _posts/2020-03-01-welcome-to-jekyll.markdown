@@ -3,7 +3,7 @@ layout: post
 title:  "Theme Showcase"
 subtitle: "Features and yaml configuration demo" #optional 
 author: "RiinoSite"    #optional
-date:   2022-06-04 12:08:09 +0800
+date:   2022-06-04 10:08:09 +0800
 tags:           #optional
 - jekyll 
 - doc

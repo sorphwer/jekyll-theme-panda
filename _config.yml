@@ -4,7 +4,7 @@ title: jekyll-theme-panda
 author: riino
 email: riino@gmail.com
 SEOTitle: jekyll-theme-panda demo
-baseurl: "/jekyll-theme-panda" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://riino.site" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: sorphwer
 github_username: sorphwer
@@ -55,9 +55,9 @@ navigation:
 
 dropdown_header: Theme #will only exist if dropdown array below has item(s)
 dropdown:
-- text: Blog
+- text: BLOG
   url: https://riino.site
-- text: Photo
+- text: LOW ILLU.
   url: https://li.riino.site
 
 footer_text:
