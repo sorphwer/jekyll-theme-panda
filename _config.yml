@@ -57,8 +57,6 @@ dropdown_header: Theme #will only exist if dropdown array below has item(s)
 dropdown:
 - text: BLOG
   url: https://riino.site
-- text: Theme
-  url : https://riino.site/jekyll-theme-panda/
 - text: LOW ILLU.
   url: https://li.riino.site
 
