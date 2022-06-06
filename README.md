@@ -1,6 +1,8 @@
 # jekyll-theme-panda
 
-[![Gem Version](https://badge.fury.io/rb/jekyll-theme-panda.svg)](https://badge.fury.io/rb/jekyll-theme-panda)  ![](https://ruby-gem-downloads-badge.herokuapp.com/jekyll-theme-panda?type=total)
+[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-white.svg)](https://sonarcloud.io/summary/new_code?id=sorphwer_jekyll-theme-panda)
+
+[![Gem Version](https://badge.fury.io/rb/jekyll-theme-panda.svg)](https://badge.fury.io/rb/jekyll-theme-panda)  ![](https://ruby-gem-downloads-badge.herokuapp.com/jekyll-theme-panda?type=total) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=sorphwer_jekyll-theme-panda&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=sorphwer_jekyll-theme-panda)
 
 Theme Showcase : [RiinoSite - Jeklyy-Theme-Panda](https://riino.site/jekyll-theme-panda/)
 
