@@ -11,7 +11,6 @@ DEMO 1： [RiinoSite Blog](https://riino.site/)
 DEMO 2： [low illuminance](https://li.riino.site/)
 
 
-**! Notes: Currently the mathjax.js might be unavailable in your blog, please use it locally or change CDN url in your own projects. We will fix this in next version.**
 
 [TOC]
 
