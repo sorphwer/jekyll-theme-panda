@@ -1,8 +1,10 @@
 <footer class="js-fadein">
   <div class="footer__link">
     <p>
-      <a href="{{ site.baseurl }}/feed.xml">RSS Subscribe</a><span>/</span><a href="{{ site.baseurl }}/policy/">Policy</a>
-    </p>
+
+        {{ site.footer_html }}
+
+      </p>
   </div>
   <!-- .footer__link -->
   <div class="footer__copy">
@@ -21,6 +23,7 @@
       <small>{{item}}</small>
       {% endfor %}
     {% endif %}
+    {% include search.html %}
   </div>
   <!-- .footer__copy -->
 </footer>

@@ -65,12 +65,16 @@ footer_text:
 - Image and animte assets &copy by <a href="https://li.riino.site"><i>Low illuminance</i></a>
 - All Rights Reserved.
 
+footer_html: <a href="{{ site.baseurl }}/feed.xml">RSS Subscribe |</a><span></span><a href="{{ site.baseurl }}/policy/">Policy</a>
+
 hoster_logo: /assets/img/logo_Nest.png
 hoster_logo_link: https://github.com/sorphwer
 hoster_logo_alt: Github
 hoster_text:
 - Nest of Etamine - 10th Anniversary
 - 2012-2022
+
+optional_footer_html_code: 
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
