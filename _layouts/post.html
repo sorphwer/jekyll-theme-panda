@@ -2,10 +2,6 @@
 layout: default
 ---
 {%if page.mathjax != false %}
-<!-- <script type="text/javascript" id="MathJax-script" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.1/es5/tex-chtml-full.min.js">
-</script> -->
-
 <link rel="stylesheet" href="{{ "/assets/css/prism.css" | prepend: site.baseurl }}">
 <script src="{{ "/assets/js/prism.js" | prepend: site.baseurl }}"></script>
 <script type="text/javascript" id="MathJax-script" async src="{{ "/assets/js/tex-chtml-full.min.js" | prepend: site.baseurl }}"></script>
@@ -17,25 +13,12 @@ layout: default
       fontCache: 'global'
     }
   };</script>
-  <!-- <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-        }
-    });
-</script> -->
-  {%endif%}
-<!-- {%if page.mathjax != false %}
-<script 
-    type="text/javascript" 
-    async
-    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-    onload="MathJax.Hub.Config({tex2jax: {skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],inlineMath: [['$','$']]}});"
-</script>
-{%endif%} -->
+{%endif%}
 
-
+{% if page.auto-convert-img %}
+<script src="{{ "/assets/js/typora2jekyll.js" | prepend: site.baseurl }}"></script>
+{% endif %}
+<!-- <script src="{{ "/assets/js/typora2jekyll.js" | prepend: site.baseurl }}"></script> -->
 <section id="front-wedge" style="height: 0px;"></section>
 {% if page.toc != false %}
 <div class="sidebar_catelog sticky-top"></div>

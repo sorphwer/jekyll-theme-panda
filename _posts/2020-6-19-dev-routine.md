@@ -11,8 +11,33 @@ banner-title: THEME DOC
 banner-subtitle: Dev Backlog
 last-modify: 2022-06-04 10:30:00 +0000
 never-expired: true
+auto-convert-img : true
 
 ---
+## Ver. Panda-0.2.4
+
+- Feat: New yaml config varable `auto-convert-img` that is set as false by default.
+
+  To set it as **true**, you can access your img in both Typora and Jekyll Website.
+
+  What you need to do:
+
+  1. Open your Typora settings and set the path where your image will be save as  
+
+     `../img/in-post/${filename}`
+  
+  2. Just paste image into Typora like this: (the src will be ../img/in-post/2020-6-19-dev-routine/image-20221113222754216.png)
+  
+     ![image-20221113222754216](../img/in-post/2020-6-19-dev-routine/image-20221113222754216.png)
+  
+  3. Set `auto-convert-img` as `true` will will allow jQuery to automate transfer your image src and show in your website:
+  
+     ```yaml
+     auto-convert-img : true
+     ```
+  
+     
+
 ## Ver. Panda-0.2.3
 
  - Fix: Floating TOC panel is back as old version works when `toc` is true or default.
