@@ -6,9 +6,9 @@
 
 Theme Showcase : [RiinoSite - Jeklyy-Theme-Panda](https://riino.site/jekyll-theme-panda/)
 
-DEMO 1： [RiinoSite Blog](https://riino.site/)
+DEMO： [RiinoSite Blog](https://riino.site/)
 
-DEMO 2： [low illuminance](https://li.riino.site/)
+
 
 
 
@@ -81,6 +81,7 @@ banner-title: THEME DOC #optional
 banner-subtitle: Readme.md #optional, must be with banner-title
 never-expired: false #default fause, if ture , expired banner will not display
 # toc options: inline, true, false
+render_with_liquid: true #default: true, set as false to disable liquid
 ---
 ```
 
