@@ -23,7 +23,10 @@ auto-convert-img : true
 
 - Fix: Fix base url issue resulting in 404 pic or favicon by using `jekyll-seo-tag`
 
+- Fix: Fix image/nav url issue when deploy with base_url
+
 - TODO: still working on mermaid.js loading issue
+
 ## Ver. Panda-0.2.4
 
 - Feat: New yaml config varable `auto-convert-img` that is set as false by default.
