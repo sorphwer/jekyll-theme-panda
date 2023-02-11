@@ -11,5 +11,6 @@ group :jekyll_plugins do
     gem "jekyll-feed", "~> 0.6"
     gem 'jemoji'
     gem "jekyll-paginate"
+    gem "jekyll-seo-tag"
 end
 gem "activesupport", ">= 4.1.11"

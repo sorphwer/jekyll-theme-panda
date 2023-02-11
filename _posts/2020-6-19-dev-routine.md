@@ -14,6 +14,16 @@ never-expired: true
 auto-convert-img : true
 
 ---
+
+## Ver. Panda-0.2.5
+
+- Feat: with latest jekyll-search-bar, where `setSearchJsonBaseURL` is available to custom base url.
+
+- Fix: Fix double embedded search.js which results in unavaiable search feature
+
+- Fix: Fix base url issue resulting in 404 pic or favicon by using `jekyll-seo-tag`
+
+- TODO: still working on mermaid.js loading issue
 ## Ver. Panda-0.2.4
 
 - Feat: New yaml config varable `auto-convert-img` that is set as false by default.
