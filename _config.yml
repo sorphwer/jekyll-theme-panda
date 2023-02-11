@@ -10,7 +10,7 @@ twitter_username: sorphwer
 github_username: sorphwer
 github_url: https://github.com/sorphwer
 repo_url: https://github.com/sorphwer/jekyll-theme-panda
-theme_version: 0.2.2
+theme_version: 0.2.5
 permalink: /:year-:month-:day-:title:output_ext
 # Build settings
 # markdown: kramdown
@@ -68,6 +68,7 @@ footer_text:
 
 footer_html: <a href="{{ site.baseurl }}/feed.xml">RSS Subscribe |</a><span></span><a href="{{ site.baseurl }}/policy/">Policy</a>
 
+banner_img: /assets/img/banner.gif
 hoster_logo: /assets/img/logo_Nest.png
 hoster_logo_link: https://github.com/sorphwer
 hoster_logo_alt: Github
