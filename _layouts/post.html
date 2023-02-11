@@ -72,7 +72,7 @@ layout: default
             <!-- custom banner -->
             {% if page.banner-title%}
             <div class="d-flex banner">
-                <img src="/assets/img/banner.gif" class="black-white-image p-2 flex-fill bd-highlight banner-image">
+                <img src="{{ site.baseurl | append: "/assets/img/banner.gif"}}" class="black-white-image p-2 flex-fill bd-highlight banner-image">
                 <div class="p-2 flex-fill bd-highlight ">
                     <h1 class="banner-text">{{page.banner-title}}</h1>
                     <p class="banner-text">{{page.banner-subtitle}}</p>
