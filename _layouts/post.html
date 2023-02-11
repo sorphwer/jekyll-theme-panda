@@ -72,7 +72,7 @@ layout: default
             <!-- custom banner -->
             {% if page.banner-title%}
             <div class="d-flex banner">
-                <img src="/assets/img/banner.gif" class="black-white-image p-2 flex-fill bd-highlight banner-image">
+                <img src="assets/img/banner.gif" class="black-white-image p-2 flex-fill bd-highlight banner-image">
                 <div class="p-2 flex-fill bd-highlight ">
                     <h1 class="banner-text">{{page.banner-title}}</h1>
                     <p class="banner-text">{{page.banner-subtitle}}</p>
@@ -88,7 +88,7 @@ layout: default
             {% if curr_date>1 %}
                 {% unless page.never-expired %}
                 <div class="d-flex banner">
-                    <img src="/assets/img/banner.gif" class="warning-image p-2 flex-fill bd-highlight banner-image">
+                    <img src="assets/img/banner.gif" class="warning-image p-2 flex-fill bd-highlight banner-image">
                     <div class="p-2 flex-fill bd-highlight ">
                         <h1 class="banner-text" style="color: #e83e8c !important;"><i class="fa fa-exclamation-triangle"
                                 style="color: #e83e8c !important;font-size: 2.5rem;" aria-hidden="true"></i> Expired</h1>
@@ -102,7 +102,7 @@ layout: default
             <!-- WIP banner -->
             {%if page.status == "WIP"%}
             <div class="d-flex banner">
-                <img src="/assets/img/banner.gif" class="black-white-image p-2 flex-fill bd-highlight banner-image">
+                <img src="assets/img/banner.gif" class="black-white-image p-2 flex-fill bd-highlight banner-image">
                 <div class="p-2 flex-fill bd-highlight ">
                     <h1 class="banner-text">Work in progress</h1>
                     <p class="banner-text"><i class="fa fa-spinner" aria-hidden="true"></i>This post will be updated

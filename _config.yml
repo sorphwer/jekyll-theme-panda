@@ -38,16 +38,16 @@ sass:
 
 navigation:
 - text: Blogs
-  url: /index.html
+  url: index.html
   layout: home
 - text: Archive
-  url: /archive
+  url: archive
   layout: forarchive
 - text: Albums
-  url: /albums
+  url: albums
   layout: albumlist
 - text: Presets
-  url: /presets
+  url: presets
   layout: presetlist
 # - text: Visios
 #   url: ./visios
