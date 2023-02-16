@@ -50,6 +50,77 @@ To add new posts, simply add a file in the `_posts` directory that follows the c
 - Emoji Support
 - Highly custom config in header and footer
 
+# Site Configuration
+
+```yaml
+title: jekyll-theme-panda #replace it with yours
+author: riino #replace it with yours
+email: riino@gmail.com #replace it with yours
+SEOTitle: jekyll-theme-panda demo #replace it with yours
+baseurl: "/jekyll-theme-panda" # the subpath of your site, e.g. /blog
+url: "https://riino.site" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: sorphwer #replace it with yours
+github_username: sorphwer #replace it with yours
+github_url: https://github.com/sorphwer #replace it with yours
+repo_url: https://github.com/sorphwer/jekyll-theme-panda #replace it with yours
+theme_version: 0.2.5
+permalink: /:year-:month-:day-:title:output_ext #please keep using single route schema
+
+markdown: kramdown
+kramdown:
+   syntax_highlighter_opts:
+      disable : true
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jemoji
+  - jekyll-seo-tag
+paginate: 10
+
+toc:
+  min_level: 1 # default: 1
+  max_level: 4 # default: 6
+sass:
+    sass_dir: _sass
+    style: compressed
+
+navigation: #custom nav bar, replace it with yours
+- text: Blogs
+  url: index.html
+  layout: home
+- text: Archive
+  url: archive
+  layout: forarchive
+- text: Albums
+  url: albums
+  layout: albumlist
+- text: Presets
+  url: presets
+  layout: presetlist
+
+dropdown_header: Theme #default text in dropdrown, it will only exist if dropdown array below has item(s)
+dropdown: #replace it with yours
+- text: BLOG
+  url: https://riino.site
+
+footer_text: #replace it with yours
+- jekyll-theme-panda demo by Riino
+- Image and animte assets &copy by <a href="https://li.riino.site"><i>Low illuminance</i></a>
+- All Rights Reserved.
+
+footer_html: <a href="{{ site.baseurl }}/feed.xml">RSS Subscribe |</a><span></span><a href="{{ site.baseurl }}/policy/">Policy</a> #a list as injected html, you can inject google GA here if you want.
+
+banner_img: /assets/img/banner.gif
+hoster_logo: /assets/img/logo_Nest.png #replace it with yours
+hoster_logo_link: https://github.com/sorphwer #replace it with yours
+hoster_logo_alt: Github
+hoster_text: #replace it with yours
+- Nest of Etamine - 10th Anniversary
+- 2012-2022
+```
+
+
+
 # Front Matter Configurations
 
 TOC is enabled automatically, you can set such yaml head to disable it with `toc:false`. When enabled, a toc at top of the article or the sidebar will be created automatically, and you do not need to add anything, any standard markdown titles will be recognized.

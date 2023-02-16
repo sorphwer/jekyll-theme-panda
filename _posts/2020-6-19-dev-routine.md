@@ -25,7 +25,7 @@ auto-convert-img : true
 
 - Fix: Fix image/nav url issue when deploy with base_url
 
-- TODO: still working on mermaid.js loading issue
+- TODO: still working on mermaid.js loading issue(Current remediation methods is to add a 1500ms delay)
 
 ## Ver. Panda-0.2.4
 

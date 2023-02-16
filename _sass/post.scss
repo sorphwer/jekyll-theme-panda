@@ -2,76 +2,76 @@
   text-transform: none;
 }
 
-html {
-  --link-color:rgb(0, 112, 201);
-  --main-background-color:#FFF;
-  --footer-color:#FFF;
-  --main-text-color:#000;
-  --post-title-color:#282828;
-  --message-border-color:#000;
-  --author-color:#212529;
-  --text:#000;
+// html {
+//   --link-color:rgb(0, 112, 201);
+//   --main-background-color:#FFF;
+//   --footer-color:#FFF;
+//   --main-text-color:#000;
+//   --post-title-color:#282828;
+//   --message-border-color:#000;
+//   --author-color:#212529;
+//   --text:#000;
 
-  &[data-theme="light"] {
-    --link-color:rgb(0, 112, 201);
-    --main-background-color:#FFF;
-    --footer-color:#FFF;
-    --main-text-color:#000;
-    --post-title-color:#282828;
-    --message-border-color:#000;
-    --author-color:#212529;
-    --text:#000;
-  }
+//   &[data-theme="light"] {
+//     --link-color:rgb(0, 112, 201);
+//     --main-background-color:#FFF;
+//     --footer-color:#FFF;
+//     --main-text-color:#000;
+//     --post-title-color:#282828;
+//     --message-border-color:#000;
+//     --author-color:#212529;
+//     --text:#000;
+//   }
 
-  &[data-theme="dark"] {
-    --link-color:rgb(100, 210, 255);
-    --main-background-color:#171717;
-    --footer-color:#282828;
-    --main-text-color:#FFF;
-    --post-title-color:#FFF;
-    --message-border-color:#282828;
-    --author-color:#FFF;
-    --text:#e3e3e3;
-  }
-}
+//   &[data-theme="dark"] {
+//     --link-color:rgb(100, 210, 255);
+//     --main-background-color:#171717;
+//     --footer-color:#282828;
+//     --main-text-color:#FFF;
+//     --post-title-color:#FFF;
+//     --message-border-color:#282828;
+//     --author-color:#FFF;
+//     --text:#e3e3e3;
+//   }
+// }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    --link-color:rgb(0, 112, 201);
-    --main-background-color:#FFF;
-    --footer-color:#FFF;
-    --main-text-color:#000;
-    --post-title-color:#282828;
-    --message-border-color:#000;
-    --author-color:#212529;
-    --text:#000;
-    --rect-color:#ECECFF;
+// @media (prefers-color-scheme: dark) {
+//   html {
+//     --link-color:rgb(0, 112, 201);
+//     --main-background-color:#FFF;
+//     --footer-color:#FFF;
+//     --main-text-color:#000;
+//     --post-title-color:#282828;
+//     --message-border-color:#000;
+//     --author-color:#212529;
+//     --text:#000;
+//     --rect-color:#ECECFF;
 
-    &[data-theme="light"] {
-      --link-color:rgb(0, 112, 201);
-      --main-background-color:#FFF;
-      --footer-color:#FFF;
-      --main-text-color:#000;
-      --post-title-color:#282828;
-      --message-border-color:#000;
-      --author-color:#212529;
-      --text:#000;
-      --rect-color:#ECECFF;
-    }
+//     &[data-theme="light"] {
+//       --link-color:rgb(0, 112, 201);
+//       --main-background-color:#FFF;
+//       --footer-color:#FFF;
+//       --main-text-color:#000;
+//       --post-title-color:#282828;
+//       --message-border-color:#000;
+//       --author-color:#212529;
+//       --text:#000;
+//       --rect-color:#ECECFF;
+//     }
 
-    &[data-theme="dark"] {
-      --link-color:rgb(100, 210, 255);
-      --main-background-color:#171717;
-      --footer-color:#282828;
-      --main-text-color:#FFF;
-      --post-title-color:#FFF;
-      --message-border-color:#282828;
-      --author-color:#FFF;
-      --text:#e3e3e3;
-      --rect-color:#282828;
-    }
-  }
-}
+//     &[data-theme="dark"] {
+//       --link-color:rgb(100, 210, 255);
+//       --main-background-color:#171717;
+//       --footer-color:#282828;
+//       --main-text-color:#FFF;
+//       --post-title-color:#FFF;
+//       --message-border-color:#282828;
+//       --author-color:#FFF;
+//       --text:#e3e3e3;
+//       --rect-color:#282828;
+//     }
+//   }
+// }
 
 /* override mermaid: */
 
