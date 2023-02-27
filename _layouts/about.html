@@ -1,0 +1,22 @@
+---
+layout: default
+title: About
+permalink: /about/
+---
+<style>
+    img{
+        display: inline-block;
+
+    }
+    p img{
+        width: inherit !important;
+    }
+
+</style>
+<section style="height: 100px;"></section>
+<div class="en post-container" id="markdown-content">
+    {% capture about_en %}{% include about/en.md %}{% endcapture %}
+    {{ about_en | markdownify }}
+</div>
+
+<!-- <section style="height: 50px;"> -->

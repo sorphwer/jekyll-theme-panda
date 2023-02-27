@@ -49,6 +49,8 @@ navigation:
 - text: Presets
   url: presets
   layout: presetlist
+- text: about
+  url: about
 
 
 
