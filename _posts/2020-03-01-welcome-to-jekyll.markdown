@@ -84,19 +84,27 @@ sass:
     sass_dir: _sass
     style: compressed
 
-navigation: #custom nav bar, replace it with yours
-- text: Blogs
-  url: index.html
-  layout: home
+navigation: #you musch specifiy layout value to make nav bar shows current page. If you deploy in example.com/blog you have to use bare url as below:
+- text: Blogs #text displayed in nav
+  url: index.html #url target when click nav
+  layout: home #value used to compare with current layout to implement dynamic dot in nav
 - text: Archive
-  url: archive
+  url: Archive
   layout: forarchive
-- text: Albums
-  url: albums
-  layout: albumlist
-- text: Presets
-  url: presets
-  layout: presetlist
+- text: About
+  url: About1 
+  layout: about
+#if you deploy jekyll in root domain (example.com)
+#you can add '/' in url to ensure root level redirection
+#- text: profile
+#  url: /about
+#  layout: about
+# you can also declare 'default' layout as one slot for your custom page, since none of out-of-box page using this layout:
+
+#- text: yourpage
+#  url: /yoururl
+#  layout: default
+
 
 dropdown_header: Theme #default text in dropdrown, it will only exist if dropdown array below has item(s)
 dropdown: #replace it with yours
@@ -105,10 +113,9 @@ dropdown: #replace it with yours
 
 footer_text: #replace it with yours
 - jekyll-theme-panda demo by Riino
-- Image and animte assets &copy by <a href="https://li.riino.site"><i>Low illuminance</i></a>
 - All Rights Reserved.
 
-footer_html: <a href="{{ site.baseurl }}/feed.xml">RSS Subscribe |</a><span></span><a href="{{ site.baseurl }}/policy/">Policy</a> #a list as injected html, you can inject google GA here if you want.
+footer_html: <a href="{{ site.baseurl }}/feed.xml">RSS Subscribe |</a><span></span><a href="{{ site.baseurl }}/policy/">Policy</a> #a list as injected html, you can inject google GA or other scripts here if you want.
 
 banner_img: /assets/img/banner.gif
 hoster_logo: /assets/img/logo_Nest.png #replace it with yours

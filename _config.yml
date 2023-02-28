@@ -41,16 +41,17 @@ navigation:
   url: index.html
   layout: home
 - text: Archive
-  url: archive
+  url: Archive
   layout: forarchive
 - text: Albums
-  url: albums
+  url: Albums
   layout: albumlist
 - text: Presets
-  url: presets
+  url: Presets
   layout: presetlist
-- text: about
-  url: about
+- text: About
+  url: About1
+  layout: about
 
 
 
@@ -63,7 +64,6 @@ dropdown:
 
 footer_text:
 - jekyll-theme-panda demo by Riino
-- Image and animte assets &copy by <a href="https://li.riino.site"><i>Low illuminance</i></a>
 - All Rights Reserved.
 
 footer_html: <a href="{{ site.baseurl }}/feed.xml">RSS Subscribe |</a><span></span><a href="{{ site.baseurl }}/policy/">Policy</a>

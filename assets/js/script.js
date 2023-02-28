@@ -17,9 +17,8 @@ function pageTransition() {
   $('a:not([href^="#"]):not([href^="javascript:void(0);"]):not([target]):not(.js-no-transition)').on('click', function(e){
     // $('html, body').stop().animate({ scrollTop: 0 }, 400, 'easeInOutSine');
     e.preventDefault(); 
-    url = $(this).attr('href'); // 遷移先のURLを取得
+    url = $(this).attr('href'); 
     if (url !== '') {
-      //$('main,footer,.menu').addClass('js-fadeOut');
       $('main,.menu').addClass('js-fadeOut');
       setTimeout(function(){
         window.location = url; 
