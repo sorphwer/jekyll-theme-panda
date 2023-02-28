@@ -41,13 +41,13 @@ navigation:
   url: index.html
   layout: home
 - text: Archive
-  url: Archive
+  url: archive
   layout: forarchive
 - text: Albums
-  url: Albums
+  url: albums
   layout: albumlist
 - text: Presets
-  url: Presets
+  url: presets
   layout: presetlist
 - text: About
   url: About1
