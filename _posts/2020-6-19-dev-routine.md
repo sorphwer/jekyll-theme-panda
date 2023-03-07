@@ -15,6 +15,11 @@ auto-convert-img : true
 
 ---
 
+## Ver.Panda-0.2.6
+
+- Fix: Fix URL issue in nav bar and image, update guidance in config
+- Fix: Fix missing scss variables
+
 ## Ver. Panda-0.2.5
 
 - Feat: with latest jekyll-search-bar, where `setSearchJsonBaseURL` is available to custom base url.
